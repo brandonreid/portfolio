@@ -1,5 +1,5 @@
-# usebenchmark.com
-Public facing website for Benchmark Intelligence.
+# My Personal Portfolio
+This is my portfolio website. Feel free to checkout my code!
 
 ## Getting Started
 

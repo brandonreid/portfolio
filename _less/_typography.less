@@ -1,0 +1,118 @@
+@font-path: '../fonts';
+
+// Oswald
+@font-face {
+    font-family: 'oswald';
+    src: url('@{font-path}/oswald/oswald-regular-webfont.woff2') format('woff2'),
+         url('@{font-path}/oswald/oswald-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'oswald';
+    src: url('@{font-path}/oswald/oswald-bold-webfont.woff2') format('woff2'),
+         url('@{font-path}/oswald/oswald-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+// Quatrocento
+@font-face {
+    font-family: 'quattrocento';
+    src: url('@{font-path}/quattrocento/quattrocento-regular-webfont.woff2') format('woff2'),
+         url('@{font-path}/quattrocento/quattrocento-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'quattrocento';
+    src: url('@{font-path}/quattrocento/quattrocento-bold-webfont.woff2') format('woff2'),
+         url('@{font-path}/quattrocento/quattrocento-bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: @font-family-base;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+a {
+  cursor: pointer;
+  color: @clr-link;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: darken(@clr-link, 10);
+    text-decoration: underline;
+  }
+}
+
+p, time, a, em, strong {
+  font-family: @font-family-base;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: @font-family-headers;
+  font-weight: 300;
+  margin: 0;
+  & + p {
+    margin-top: 0.75em;
+  }
+  p + &,
+  & + & {
+    margin-top: 1em;
+  }
+}
+
+p {
+  line-height: 1.4em;
+  margin: 0;
+  & + p {
+    margin-top: 0.5em;
+  }
+}
+
+.left {
+  text-align: left;
+}
+.center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
+
+.large {
+  font-size: 1.125em;
+}
+.small {
+  font-size: 0.75em;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  &.inline {
+    display: inline-block;
+  }
+}
+
+.flush {
+  margin: 0;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}

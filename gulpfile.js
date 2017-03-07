@@ -20,13 +20,12 @@ gulp.task('less', function () {
     .pipe(gulp.dest('./css/'));
 });
 
-gulp.task('fonts', function () {
-  // return gulp.src([
-  //   './node_modules/benchmark-patterns/fonts/**/*'
-  // ])
-  //   .pipe(gulp.dest('./fonts/'));
-  console.log('No Fonts Yet');
-});
+// gulp.task('fonts', function () {
+//   return gulp.src([
+//     './node_modules/benchmark-patterns/fonts/**/*'
+//   ])
+//     .pipe(gulp.dest('./fonts/'));
+// });
 
 gulp.task('server', function () {
   connect.server({
@@ -64,7 +63,7 @@ gulp.task('watch', function () {
 // Dev Mode
 
 gulp.task('dev', function(callback) {
-  runSequence(['less', 'fonts'],
+  runSequence(['less'],
               'jekyll',
               ['server', 'watch'],
               callback);
