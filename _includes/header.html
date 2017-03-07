@@ -1,0 +1,16 @@
+<header class="main-header">
+  <a href="/" class="logo">
+    <!-- baseurl here will work with prod, but not dev -->
+    {% include logo.html %}
+  </a>
+  <nav class="closed" id="mainNav" role="navigation">
+    <!-- Set navigation items in _config.yml -->
+    {% for link in site.navigation %}
+      {% assign active = nil %}
+      {% if page.url == link.url %}
+        {% assign active = 'active' %}
+      {% endif %}
+      <a class="{{ active }}" href="{{ link.url | prepend: site.baseurl }}">{{ link.text }}</a>
+    {% endfor %}
+  </nav>
+</header>

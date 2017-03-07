@@ -1,0 +1,28 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "UX Design & Front End Development Portfolio for Brandon Reid",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brandonreid/portfolio.git"
+  },
+  "author": "Brandon Reid",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brandonreid/portfolio/issues"
+  },
+  "homepage": "https://github.com/brandonreid/portfolio",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-less": "^3.3.0",
+    "gulp-shell": "^0.6.2",
+    "less-plugin-autoprefix": "^1.5.1",
+    "less-plugin-clean-css": "^1.5.1",
+    "run-sequence": "^1.2.2"
+  }
+}

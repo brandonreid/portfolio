@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+
+  {% assign activePage = nil %}
+  {% for link in site.navigation %}
+    {% if page.url == link.url %}
+      {% assign activePage = link.class %}
+    {% endif %}
+  {% endfor %}
+  {% if activePage == nil %}
+    {% assign activePage = 'blog-post-page' %}
+  {% endif %}
+  <body class="{{ activePage }}">
+    {% include header.html %}
+    {{ content }}
+    {% include footer.html %}
+  </body>
+</html>
