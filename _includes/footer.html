@@ -1,5 +1,16 @@
 <footer>
-  <p class="copyright">© {{ site.time | date: '%Y' }} Brandon Reid. All Rights Reserved.</p>
+  <div class="socials">
+    <a class="icon-github" href="https://github.com/brandonreid" target="_blank">
+      <span class="sr-only">My Github Profile</span>
+    </a>
+    <a class="icon-linkedin" href="https://www.linkedin.com/in/reidbrandon" target="_blank">
+      <span class="sr-only">My LinkedIn Profile</span>
+    </a>
+    <a class="icon-twitter" href="https://twitter.com/begraffic" target="_blank">
+      <span class="sr-only">My Twitter Profile</span>
+    </a>
+  </div>
+  <p class="center">Website Design and Development © {{ site.time | date: '%Y' }} Brandon Reid.</p>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
   <script src="{{ "/js/scripts.js" | prepend: site.baseurl }}"></script>
