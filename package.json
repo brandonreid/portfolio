@@ -24,5 +24,8 @@
     "less-plugin-autoprefix": "^1.5.1",
     "less-plugin-clean-css": "^1.5.1",
     "run-sequence": "^1.2.2"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.7"
   }
 }
