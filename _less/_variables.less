@@ -1,3 +1,4 @@
+// colors
 @clr-bg: #f6f8fa;
 @clr-text: #040d17;
 @clr-frame: #e3e4e6;
@@ -8,7 +9,18 @@
 
 @clr-accent: #286b61;
 
+// fonts
 @font-path: '../fonts';
 @font-family-base: 'open-sans', "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 @font-family-headers: 'oswald', 'Futura', 'Verdana';
 @font-family-icons: 'icons';
+
+// media queries
+@bp: ~"(min-width: 768px)";
+
+// helpers
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
