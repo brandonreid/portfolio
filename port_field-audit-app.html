@@ -29,7 +29,7 @@ permalink: /portfolio/field-auditing-application/
         </ol>
       </div>
       <div class="col-sm-12">
-        <img src="{{ site.baseurl }}/img/field-auditing-app/old-surveys-app.png" alt="">
+        <img src="{{ site.baseurl }}/img/field-auditing-app/old-surveys-app.png" alt="The old surveys app">
       </div>
     </div>
   </div>
@@ -43,7 +43,7 @@ permalink: /portfolio/field-auditing-application/
         <p>Refactoring an app at a small startup is only possible with careful timing, strong will and the gracious support from teammates to grant you the time while continuing to push important features and remaining responsive to customer needs.</p>
       </div>
       <div class="col-sm-12">
-        <img src="{{ site.baseurl }}/img/field-auditing-app/sketches.png" alt="">
+        <img src="{{ site.baseurl }}/img/field-auditing-app/sketches.png" alt="Some initial sketches">
       </div>
     </div>
   </div>
@@ -51,7 +51,7 @@ permalink: /portfolio/field-auditing-application/
 <div class="faa-hit-list">
   <div class="container">
     <div class="row">
-      <div class="col-sm-24">
+      <div class="col-xs-24">
         <h2>The Hit List</h2>
         <p>When approaching the redesign there were a few key functionalities that I knew we needed to improve or incorporate.</p>
         <ul>
@@ -61,6 +61,73 @@ permalink: /portfolio/field-auditing-application/
           <li><strong>Better Survey Navigation</strong> – Users often need to jump between pages, sometimes leaving them partially complete. I wanted to design something that would make traversing pages easier and at the same time inform them of the completion status of each page as they go.</li>
           <li><strong>Automatically Save Survey Progress</strong> – In the MVP, a user's progress could be wiped out by a reload. When users are in the field, internet connection can be spotty at times, making the risks of a reload very prevalent.</li>
         </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <figure>
+    <img src="{{ site.baseurl }}/img/field-auditing-app/designing.jpg" alt="Using Afinity Designer">
+    <figcaption>Designing in Affinity Designer. Note: Designed in an iPhone with a case, because I used a big battery case like that, sort of a gag for my teammates.</figcaption>
+  </figure>
+</div>
+<div class="faa-designing">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-24">
+        <h2>Designing</h2>
+        <p>After some initial sketches it was off to the races in my design software. Typically I'd spend a lot more time wire-framing and user testing before drafting a polished design, but because the environment was a fast paced startup things were a little different.</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <p>I did run some "gorilla" UX tests from sketches, particularly the survey page navigation UI I had come up with that was pretty unique. By "gorilla UX tests", I mostly mean roughly sketching a UI I want to validate and showing it to people around me, like my wife, co-founders, friends and random people in the halls at Bitwise. With vague questions such as "What do you think this is?" and "What do you expect to happen when you click that?", ideas can be roughly validated or ruled out with a surprisingly small sample size. Beyond that, I knew I was using established design patterns and much of the work flow already in use in the MVP version.</p>
+        <p>I was also able to rely on a fairly shallow design, not going into too much detail regarding error/success messaging, etc. knowing I would be developing the front end and handling most of that messaging as it occurred in code. When I'm not developing a UI myself, a solid relationship between developer and designer is important for making sure those smaller things are accounted for and presented well. It's nearly impossible to design a UI with everything accounted for, and a major reason software designers need to understand code.</p>
+      </div>
+      <div class="col-sm-12">
+        <img src="{{ site.baseurl }}/img/field-auditing-app/sketch-prototype.jpg" alt="Sketch prototype for early UX tests">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="faa-initial-design">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-24">
+        <h3>Initial Design Mock-ups</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <img src="{{ site.baseurl }}/img/field-auditing-app/initial-mockup-1.jpg" alt="Initial design mockup screen 1">
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <img src="{{ site.baseurl }}/img/field-auditing-app/initial-mockup-2.jpg" alt="Initial design mockup screen 2">
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <img src="{{ site.baseurl }}/img/field-auditing-app/initial-mockup-3.jpg" alt="Initial design mockup screen 3">
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <img src="{{ site.baseurl }}/img/field-auditing-app/initial-mockup-4.jpg" alt="Initial design mockup screen 4">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="faa-building">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2>Building</h2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-12">
+        <p>With customer requests for a better survey experience coming in and the initial mock-ups providing a clear enough direction, there was no time to waste.</p>
+        <h3>Technology Used</h3>
+        <p>This application, like the MVP, would be a web app since our development team wasn't proficient with native iOS or Android development and we wanted our customers to be able to use any device, including a laptop, to take a survey. So, like the desktop dashboard we had rebuilt previously, this would be built using <a href="https://angular.io/" target="_blank">Angular 2</a> with <a href="https://webpack.js.org/" target="_blank">Webpack</a> &amp; <a href="https://www.typescriptlang.org/" target="_blank">Typescript</a>. I was able to spin up a development environment quickly by leveraging <a href="https://cli.angular.io/" target="_blank">Angular CLI</a>. Of course we'd also be utilizing our in-house <a href="http://usebenchmark.github.io/pattern-library/" target="_blank">pattern library</a> for general styles.</p>
+      </div>
+      <div class="col-sm-12">
+        <img src="{{ site.baseurl }}/img/field-auditing-app/web-tech.svg" alt="Web Technology Used">
       </div>
     </div>
   </div>

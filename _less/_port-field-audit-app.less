@@ -60,10 +60,11 @@
 }
 
 .faa-hit-list {
-  padding: 5em 0;
+  padding: 7.5em 0;
   h2 {
     font-size: 2.5em;
     text-align: center;
+    text-transform: uppercase;
   }
   p { text-align: center; }
   ul {
@@ -78,11 +79,54 @@
     max-width: 43.249em;
     transform: rotate(-1deg) scale(1);
     box-shadow: -1px 2px 6px 1px fadeOut(@clr-text, 70);
-    transition: transform 300ms ease,
-                box-shadow 300ms ease;
-    &:hover {
-      transform: rotate(0deg) scale(1.125);
-      box-shadow: 0 6px 15px -4px fadeOut(@clr-text, 50);
-    }
+  }
+}
+
+.faa-designing {
+  padding: 5em 0 7.5em;
+  h2 {
+    font-size: 3.375em;
+    text-transform: uppercase;
+  }
+  img {
+    border: 2px solid @clr-frame;
+    display: block;
+    margin: 0 auto;
+    max-width: 23em;
+    transform: rotate(-1deg);
+  }
+}
+
+.faa-initial-design {
+  background-color: white;
+  border-top: 2px solid @clr-frame;
+  border-bottom: 2px solid @clr-frame;
+  padding: 5em 0 7.5em;
+  h3 {
+    font-size: 2.5em;
+    font-weight: normal;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+    opacity: 0.5;
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 17em;
+  }
+}
+
+.faa-building {
+  padding: 5em 0;
+  h2 {
+    font-size: 3.375em;
+    text-transform: uppercase;
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 25.629em;
   }
 }
