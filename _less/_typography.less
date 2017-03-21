@@ -86,6 +86,23 @@ p {
   }
 }
 
+blockquote {
+  border: 2px dashed @clr-frame;
+  position: relative;
+  font-style: italic;
+  line-height: 1.4em;
+  margin: 0;
+  padding: 0.667em 1em;
+  &:before {
+    content: '"';
+    position: absolute;
+    left: 0.333em;
+  }
+  &:after {
+    content: '"';
+  }
+}
+
 ul, ol {
   margin: 0;
   padding-left: 2em;
@@ -108,7 +125,9 @@ figure {
     color: @clr-text-lt;
     font-size: 0.75em;
     font-style: italic;
+    line-height: 1.4em;
     text-align: center;
+    margin-top: 0.25em;
   }
 }
 

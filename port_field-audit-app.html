@@ -76,7 +76,7 @@ permalink: /portfolio/field-auditing-application/
     <div class="row">
       <div class="col-xs-24">
         <h2>Designing</h2>
-        <p>After some initial sketches it was off to the races in my design software. Typically I'd spend a lot more time wire-framing and user testing before drafting a polished design, but because the environment was a fast paced startup things were a little different.</p>
+        <p>After some initial sketches it was off to the races in my design software. Typically I'd spend a lot more time wire-framing and user testing before drafting a polished design, but because the environment was a fast paced startup, things were a little different.</p>
       </div>
     </div>
     <div class="row">
@@ -86,6 +86,13 @@ permalink: /portfolio/field-auditing-application/
       </div>
       <div class="col-sm-12">
         <img src="{{ site.baseurl }}/img/field-auditing-app/sketch-prototype.jpg" alt="Sketch prototype for early UX tests">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-24">
+        <blockquote>
+          It's nearly impossible to design a UI with everything accounted for, and a major reason software designers need to understand code.
+        </blockquote>
       </div>
     </div>
   </div>
@@ -120,7 +127,7 @@ permalink: /portfolio/field-auditing-application/
         <h2>Building</h2>
       </div>
     </div>
-    <div class="row">
+    <div class="row ffa-tech-used">
       <div class="col-sm-12">
         <p>With customer requests for a better survey experience coming in and the initial mock-ups providing a clear enough direction, there was no time to waste.</p>
         <h3>Technology Used</h3>
@@ -128,6 +135,79 @@ permalink: /portfolio/field-auditing-application/
       </div>
       <div class="col-sm-12">
         <img src="{{ site.baseurl }}/img/field-auditing-app/web-tech.svg" alt="Web Technology Used">
+      </div>
+    </div>
+    <div class="row faa-adapting">
+      <div class="col-sm-12">
+        <h3>Adapting While Coding</h3>
+      </div>
+    </div>
+    <div class="row faa-before-after">
+      <div class="col-xs-24 col-sm-10">
+        <p>Absolute strict adherence to a design is never the best for implementation. This is one area I’ve seen enterprise level software development suffer, leading to projects going way over time and resulting in a finished product that lacks the polish envisioned by designers.</p>
+        <p>One example of adaptation while coding is on the location selection view. I originally designed the list to have a drag handle for modifying how much screen real estate it had, a pattern I borrowed from iOS's map application. I did attempt to implement this, but finding that reliably dragging it while making sure the map scaled appropriately (allowing the map's centering calculations to be in proper) was overly challenging, "janky" and in the end, more work than was necessary to simply get more of the list in view. So I adapted, abandoning the slider and using a button instead. This resulted in a faster, more explicit and simple user experience with much cleaner code.</p>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <figure>
+          <img src="{{ site.baseurl }}/img/field-auditing-app/before-locations-list.jpg" alt="List expansion pattern in design.">
+          <figcaption>Design Mock-up</figcaption>
+        </figure>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <figure>
+          <img src="{{ site.baseurl }}/img/field-auditing-app/after-locations-list.jpg" alt="List expansion pattern in production.">
+          <figcaption>Final Development</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="row faa-copy-paste-title">
+      <div class="col-xs-24">
+        <h3>Enhancing While Coding</h3>
+      </div>
+    </div>
+    <div class="row faa-copy-paste">
+      <div class="col-sm-12">
+        <p>By saving time and opting for more simple implementations where experience and value isn't sacrificed, simple features that weren't initially considered are able to make it into production. While interacting with the map and list it occurred to me that users might expect, or have a need to be able to navigate from this view. Of course building navigation into this app would cost enormous amounts of time, so instead I added a button on the fly, allowing users to copy a location's address with one click/tap. They can then easily take that address to dedicated navigation software.</p>
+      </div>
+      <div class="col-sm-12">
+        <img src="{{ site.baseurl }}/img/field-auditing-app/copy-paste.png" alt="">
+      </div>
+    </div>
+    <div class="row faa-before-after">
+      <div class="col-xs-24 col-sm-10">
+        <p>As a UI becomes "alive", actually interactive and you have the opportunity to play it, moderate adaptation on the fly is crucial for achieving the best results. On the survey list view, I originally designed simple selectable panels. However once I was able to interact with them and notice my raw impressions while navigating around, I realized they didn't appear "clickable" like a link or button does. So I adapted, adding indication that they navigate you somewhere when clicked.</p>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <figure>
+          <img src="{{ site.baseurl }}/img/field-auditing-app/before-survey-list.jpg" alt="Survey list in design.">
+          <figcaption>Design Mock-up</figcaption>
+        </figure>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <figure>
+          <img src="{{ site.baseurl }}/img/field-auditing-app/after-survey-list.jpg" alt="Survey list in production.">
+          <figcaption>Final Development</figcaption>
+        </figure>
+      </div>
+    </div>
+    <div class="row faa-blanks">
+      <div class="col-sm-12">
+        <h3>Filling in the Blanks</h3>
+        <p>One more example of adapting on the fly, or in this case having to respond to an undesigned component that was defined in the "hit list" (an artifact of rapid designing), was I realized I needed to keep the user informed about their connection status and when survey progress was saved. This realization didn't occur until I was actually writing code for saving progress as the user entered survey responses. After some thought over coffee and a few sketches on a napkin, I added a status indicator to the "mast". When a user enters a response, their progress will save automatically and provide indication. If saving failed, a clear warning would be displayed that the user lost internet connection and the system would attempt to reconnect every 10 or so seconds.</p>
+      </div>
+      <div class="col-sm-12">
+        <figure>
+          <img src="{{ site.baseurl }}/img/field-auditing-app/status-saving.jpg" alt="Saving status.">
+          <figcaption>When Saving</figcaption>
+        </figure>
+        <figure>
+          <img src="{{ site.baseurl }}/img/field-auditing-app/status-saved.jpg" alt="Saved status.">
+          <figcaption>When Saved</figcaption>
+        </figure>
+        <figure>
+          <img src="{{ site.baseurl }}/img/field-auditing-app/status-disconnected.jpg" alt="Disconnected status.">
+          <figcaption>When Disconnected</figcaption>
+        </figure>
       </div>
     </div>
   </div>
