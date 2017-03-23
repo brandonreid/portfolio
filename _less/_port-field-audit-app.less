@@ -23,14 +23,18 @@
 }
 
 .faa-setting-stage {
-  padding: 7.594em 0;
+  padding: 5em 0;
   h2 {
     text-transform: uppercase;
   }
   img {
     display: block;
     margin: 0 auto;
+    width: 100%;
     max-width: 25.629em;
+  }
+  @media @bp {
+    padding: 7.594em 0;
   }
 }
 
@@ -47,20 +51,23 @@
   img {
     display: block;
     margin: 0 auto;
+    width: 100%;
     max-width: 25.625em;
   }
-  .row {
-    display: flex;
-    .copy {
+  @media @bp {
+    .row {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
+      .copy {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
     }
   }
 }
 
 .faa-hit-list {
-  padding: 7.5em 0;
+  padding: 3.325em 0;
   h2 {
     font-size: 2.5em;
     text-align: center;
@@ -80,12 +87,15 @@
     transform: rotate(-1deg) scale(1);
     box-shadow: -1px 2px 6px 1px fadeOut(@clr-text, 70);
   }
+  @media @bp {
+    padding: 7.5em 0;
+  }
 }
 
 .faa-designing {
-  padding: 5em 0 7.5em;
+  padding: 3.325em 0;
   h2 {
-    font-size: 3.375em;
+    font-size: 2.25em;
     text-transform: uppercase;
   }
   img {
@@ -97,8 +107,18 @@
     transform: rotate(-1deg);
   }
   blockquote {
-    font-size: 2.25em;
-    margin-top: 3.797em;
+    font-size: 1.5em;
+    margin-top: 1em;
+  }
+  @media @bp {
+    padding: 5em 0 7.5em;
+    h2 {
+      font-size: 3.375em;
+    }
+    blockquote {
+      font-size: 1.668em;
+      margin-top: 3.797em;
+    }
   }
 }
 
@@ -106,9 +126,9 @@
   background-color: white;
   border-top: 2px solid @clr-frame;
   border-bottom: 2px solid @clr-frame;
-  padding: 5em 0 7.5em;
+  padding: 3.325em 0;
   h3 {
-    font-size: 2.5em;
+    font-size: 1.5em;
     font-weight: normal;
     text-align: center;
     text-transform: uppercase;
@@ -117,16 +137,21 @@
   }
   img {
     display: block;
-    margin: 0 auto;
+    margin: 0 auto 1em;
     width: 100%;
     max-width: 17em;
+  }
+  @media @bp {
+    padding: 5em 0 7.5em;
+    h3 { font-size: 2.5em; }
+    img { margin-bottom: 0; }
   }
 }
 
 .faa-building {
   padding: 5em 0;
   h2 {
-    font-size: 3.375em;
+    font-size: 2.25em;
     text-transform: uppercase;
   }
   .ffa-tech-used {
@@ -145,14 +170,10 @@
       display: block;
       width: 100%;
       max-width: 14em;
-      margin: 0 auto;
+      margin: 1em auto 0;
     }
   }
-  .faa-copy-paste-title {
-    margin-top: 5em;
-  }
   .faa-copy-paste {
-    margin-bottom: 5em;
     img {
       display: block;
       width: 100%;
@@ -161,7 +182,6 @@
     }
   }
   .faa-blanks {
-    margin-top: 5em;
     figure {
       max-width: 25.625em;
       margin: 0 auto;
@@ -170,15 +190,22 @@
       }
     }
   }
+  @media @bp {
+    h2 { font-size: 3.375em; }
+    .faa-before-after img { margin-top: 0; }
+    .faa-copy-paste-title { margin-top: 5em; }
+    .faa-copy-paste { margin-bottom: 5em; }
+    .faa-blanks { margin-top: 5em; }
+  }
 }
 
 .faa-introducing {
   background-color: @clr-text;
   background: linear-gradient(160deg, @clr-text 0%,@clr-accent 100%);
-  padding: 5em 0 0;
+  padding: 2.25em 0 0;
   overflow: hidden;
   h2 {
-    font-size: 3.375em;
+    font-size: 2.25em;
     color: white;
     text-align: center;
     text-transform: uppercase;
@@ -188,30 +215,43 @@
       line-height: 1.4em;
     }
     span.int {
-      font-size: 2rem;
+      font-size: 1.5rem;
     }
     span.tbi {
-      font-size: 1.5rem;
+      font-size: 1.25rem;
     }
   }
   .images {
     img {
       margin-bottom: 1em;
     }
-    .one,
-    .six {
-      transform: scale(0.75);
-    }
-    .two,
-    .five {
-      transform: scale(0.85);
-    }
   }
   .in-ipad {
     display: block;
-    margin: 1em auto -5em;
+    margin: 1em auto 2em;
     width: 100%;
     max-width: 38.443em;
+  }
+  @media @bp {
+    padding: 5em 0 0;
+    h2 {
+      font-size: 3.375em;
+      span.int { font-size: 2rem; }
+      span.tbi { font-size: 1.5rem; }
+    }
+    .images {
+      .one,
+      .six {
+        transform: scale(0.75);
+      }
+      .two,
+      .five {
+        transform: scale(0.85);
+      }
+    }
+    .in-ipad {
+      margin-bottom: -5em;
+    }
   }
 }
 
@@ -226,5 +266,8 @@
     display: block;
     width: 100%;
     max-width: 20em;
+  }
+  .back-link {
+    margin-top: 3.325em;
   }
 }
