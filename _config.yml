@@ -3,7 +3,7 @@ title: UX Design & Front End Development Portfolio for Brandon Reid
 email: brandonreidak@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Brandon Reid is a UX Designer & Front End Developer in California, also co-founder of Benchmark Intelligence.
-baseurl: "/portfolio/" # the subpath of your site, e.g. /blog/
+baseurl: "/portfolio" # the subpath of your site, e.g. /blog/
 url: "http://brandonreid.github.io/portfolio/" # the base hostname & protocol for your site
 
 # Build settings
