@@ -24,9 +24,9 @@ navigation:
 - text: Portfolio
   url: /
   class: portfolio-page
-- text: Blog
-  url: /blog/
-  class: blog-page
-- text: About
-  url: /about/
-  class: about-page
+# - text: Blog
+#   url: /blog/
+#   class: blog-page
+# - text: About
+#   url: /about/
+#   class: about-page
