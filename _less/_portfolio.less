@@ -1,6 +1,10 @@
 // Case Studies
 .case-studies {
-  padding-bottom: 3.375em;
+  background-color: white;
+  // border-top: 1px solid @clr-frame;
+  // border-bottom: 1px solid @clr-frame;
+  padding: 3.325em 0 5em;
+  margin-bottom: 3.325em;
 }
 
 .case-study {
@@ -10,7 +14,8 @@
   text-decoration: none;
   text-align: center;
   display: block;
-  padding: 3.375em 1em;
+  padding: 5em 1em;
+  transition: transform 300ms ease;
   h2 {
     line-height: 1.4em;
     text-transform: uppercase;
@@ -31,6 +36,7 @@
   &:focus {
     border-color: @clr-link;
     text-decoration: none;
+    transform: scale(1.04);
     p.read-on span {
       color: @clr-link;
     }
@@ -77,12 +83,12 @@
 
 a.wild-item {
   background-color: white;
-  border: 2px solid @clr-frame;
+  border: 2px solid transparent;
   color: @clr-text;
   display: block;
-  img {
-    border-bottom: 2px solid @clr-frame;
-  }
+  position: relative;
+  transition: transform 300ms ease;
+  img { border-bottom: 2px solid @clr-frame; }
   h3 {
     color: @clr-link;
     font-size: 1.125rem;
@@ -99,6 +105,9 @@ a.wild-item {
   &:focus {
     border-color: @clr-link;
     text-decoration: none;
+    transform: scale(1.04);
+    box-shadow: 0 3px 7px 0 fadeOut(black, 70);
+    z-index: 20;
     h2 {
       text-decoration: underline;
     }
