@@ -1,8 +1,8 @@
-.portfolio-pieces {
+.case-studies {
   padding-bottom: 3.375em;
 }
 
-.portfolio-item {
+.case-study {
   background-color: @clr-frame;
   border: 2px solid @clr-frame;
   color: @clr-text;
@@ -10,23 +10,28 @@
   text-align: center;
   display: block;
   padding: 3.375em 1em;
-  h1 {
+  h2 {
     line-height: 1.4em;
+    text-transform: uppercase;
   }
   p.read-on {
-    color: @clr-link;
-    font-style: italic;
-    &:after {
-      content: '>';
+    span {
+      background-color: @clr-button;
+      border: 1px solid @clr-frame;
+      border-radius: 4px;
+      color: @clr-text;
+      text-shadow: none;
+      padding: 0.125em 0.5em 0.125em 0.667em;
       display: inline-block;
-      margin-left: 0.25em;
+      i:before { margin-right: 0; }
     }
   }
-  &:hover {
+  &:hover,
+  &:focus {
     border-color: @clr-link;
     text-decoration: none;
-    p.read-on {
-      text-decoration: underline;
+    p.read-on span {
+      color: @clr-link;
     }
   }
   & + & {
@@ -37,7 +42,7 @@
 .faa {
   background: linear-gradient(160deg, @clr-text 0%,@clr-accent 100%);
   position: relative;
-  h1, p {
+  h2, p {
     color: white;
     text-shadow: 0 1px 2px @clr-text;
     position: relative;
