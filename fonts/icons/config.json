@@ -23,6 +23,12 @@
       "css": "linkedin",
       "code": 62226,
       "src": "websymbols"
+    },
+    {
+      "uid": "fdfbd1fcbd4cb229716a810801a5f207",
+      "css": "expose",
+      "code": 57381,
+      "src": "fontawesome"
     }
   ]
 }
