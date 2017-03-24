@@ -27,6 +27,6 @@ navigation:
 # - text: Blog
 #   url: /blog/
 #   class: blog-page
-# - text: About
-#   url: /about/
-#   class: about-page
+- text: About
+  url: /about/
+  class: about-page

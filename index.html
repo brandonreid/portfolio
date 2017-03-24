@@ -1,77 +1,81 @@
 ---
 layout: default
 ---
-<div class="constrained container case-studies">
-  <div class="row">
-    <div class="col-xs-24">
-      <h1>Case Studies</h1>
-      <a class="case-study faa" href="{{ '/pieces/field-auditing-application/' | prepend: site.baseurl }}">
-        <h2>Field Auding Application</h2>
-        <p>The story of a web app rebuild at a startup in under a month.</p>
-        <p class="read-on"><span>Read <i class="icon-expose"></i></span></p>
-      </a>
+<section class="case-studies">
+  <div class="constrained container">
+    <div class="row">
+      <div class="col-xs-24">
+        <h1>Case Studies</h1>
+        <a class="case-study faa" href="{{ '/pieces/field-auditing-application/' | prepend: site.baseurl }}">
+          <h2>Field Auding Application</h2>
+          <p>The story of a web app rebuild at a startup in under a month.</p>
+          <p class="read-on"><span>Read <i class="icon-expose"></i></span></p>
+        </a>
+      </div>
     </div>
   </div>
-</div>
-<div class="container wild-items">
-  <div class="row">
-    <div class="col-xs-24">
-      <h1>Stuff in the Wild</h1>
-      <p class="desc">Some sites I've made that are out in the wild. A majority of my work is with enterprise level software design.</p>
+</section>
+<section class="wild-items">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-24">
+        <h1>Stuff in the Wild</h1>
+        <p class="desc">Some sites I've made that are out in the wild. A majority of my work is with enterprise level application design.</p>
+      </div>
+    </div>
+    <div class="row wi-flex">
+      <div class="col-sm-12">
+        <a class="wild-item" href="https://provimaging.com/" target="_blank">
+          <img src="{{ site.baseurl }}/img/portfolio/provimaging.jpg" alt="Providence Imaging Center Website">
+          <h3>Providence Imaging Center</h3>
+          <p class="wi-desc">A completely custom wordpress site. Features custom post types providing the client with total control of all content. Also a pretty nice "appointments" form.</p>
+        </a>
+      </div>
+      <div class="col-sm-12">
+        <a class="wild-item" href="http://thehighpointagency.com/" target="_blank">
+          <img src="{{ site.baseurl }}/img/portfolio/thehighpointagency.jpg" alt="High Point Website">
+          <h3>High Point</h3>
+          <p class="wi-desc">A completely custom wordpress site. Features custom post types providing the client with total control of all content. Also a splash of fun animations and easter eggs.</p>
+        </a>
+      </div>
+    </div>
+    <div class="row wi-flex">
+      <div class="col-sm-12">
+        <a class="wild-item" href="https://www.mygiftcardsupply.com/" target="_blank">
+          <img src="{{ site.baseurl }}/img/portfolio/mygiftcardsupply.jpg" alt="My Gift Card Supply Website">
+          <h3>My Gift Card Supply</h3>
+          <p class="wi-desc">A WooCommerce wordpress site. This is a customization of a theme with some UX and design enhancements, done so in a future-proof way.</p>
+        </a>
+      </div>
+      <div class="col-sm-12">
+        <a class="wild-item" href="http://usebenchmark.com/" target="_blank">
+          <img src="{{ site.baseurl }}/img/portfolio/benchmarkintelligence.jpg" alt="Benchmark Intelligence Website">
+          <h3>Benchmark Intelligence</h3>
+          <p class="wi-desc">Built with Jekyll. Featuring some pretty stuff and a nice form for requesting a demo.</p>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-24">
+        <h2>Pattern Libraries</h2>
+        <p class="desc">A pattern library (a.k.a. 'style guide') is a visual language designers and developers can use in applications, unifying fundamental styles and certain interactive components. Patterns are created, documented and updated in a single place and imported by any application in a company.</p>
+      </div>
+    </div>
+    <div class="row wi-flex">
+      <div class="col-sm-12">
+        <a class="wild-item" href="http://usebenchmark.github.io/pattern-library/" target="_blank">
+          <img src="{{ site.baseurl }}/img/portfolio/benchmarkpatterns.jpg" alt="Benchmark Intelligence Pattern Library">
+          <h3>Benchmark Intelligence Pattern Library</h3>
+          <p class="wi-desc"><strong>View in Chrome Browser.</strong> Leveraging LivingCSS for documentation. This is my most successful, integrated pattern library. It's used in all of Benchmark's apps and their public website.</p>
+        </a>
+      </div>
+      <div class="col-sm-12">
+        <a class="wild-item" href="http://decipher-design.com/bui/" target="_blank">
+          <img src="{{ site.baseurl }}/img/portfolio/bui.jpg" alt="BUI Pattern Library for Decipher">
+          <h3>Decipher Inc. Pattern Library</h3>
+          <p class="wi-desc">Created for Decipher Inc. (now FocusVision), BUI was the first pattern library I created.</p>
+        </a>
+      </div>
     </div>
   </div>
-  <div class="row wi-flex">
-    <div class="col-sm-12">
-      <a class="wild-item" href="https://provimaging.com/" target="_blank">
-        <img src="{{ site.baseurl }}/img/portfolio/provimaging.jpg" alt="Providence Imaging Center Website">
-        <h3>Providence Imaging Center</h3>
-        <p class="wi-desc">A completely custom wordpress site. Features custom post types providing the client with total control of all content. Also a pretty nice "appointments" form.</p>
-      </a>
-    </div>
-    <div class="col-sm-12">
-      <a class="wild-item" href="http://thehighpointagency.com/" target="_blank">
-        <img src="{{ site.baseurl }}/img/portfolio/thehighpointagency.jpg" alt="High Point Website">
-        <h3>High Point</h3>
-        <p class="wi-desc">A completely custom wordpress site. Features custom post types providing the client with total control of all content. Also a splash of fun animations and easter eggs.</p>
-      </a>
-    </div>
-  </div>
-  <div class="row wi-flex">
-    <div class="col-sm-12">
-      <a class="wild-item" href="https://www.mygiftcardsupply.com/" target="_blank">
-        <img src="{{ site.baseurl }}/img/portfolio/mygiftcardsupply.jpg" alt="My Gift Card Supply Website">
-        <h3>My Gift Card Supply</h3>
-        <p class="wi-desc">A WooCommerce wordpress site. This is a customization of a theme with some UX and design enhancements, done so in a future-proof way.</p>
-      </a>
-    </div>
-    <div class="col-sm-12">
-      <a class="wild-item" href="http://usebenchmark.com/" target="_blank">
-        <img src="{{ site.baseurl }}/img/portfolio/benchmarkintelligence.jpg" alt="Benchmark Intelligence Website">
-        <h3>Benchmark Intelligence</h3>
-        <p class="wi-desc">Built with Jekyll. Featuring some pretty stuff and a nice form for requesting a demo.</p>
-      </a>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-xs-24">
-      <h2>Pattern Libraries</h2>
-      <p class="desc">A pattern library (a.k.a. 'style guide') is a visual language designers and developers can use in applications, unifying fundamental styles and certain interactive components. Patterns are created, documented and updated in a single place and imported by any application in a company.</p>
-    </div>
-  </div>
-  <div class="row wi-flex">
-    <div class="col-sm-12">
-      <a class="wild-item" href="http://usebenchmark.github.io/pattern-library/" target="_blank">
-        <img src="{{ site.baseurl }}/img/portfolio/benchmarkpatterns.jpg" alt="Benchmark Intelligence Pattern Library">
-        <h3>Benchmark Intelligence Pattern Library</h3>
-        <p class="wi-desc"><strong>View in Chrome Browser.</strong> Leveraging LivingCSS for documentation. This is my most successful, integrated pattern library. It's used in all of Benchmark's apps and their public website.</p>
-      </a>
-    </div>
-    <div class="col-sm-12">
-      <a class="wild-item" href="http://decipher-design.com/bui/" target="_blank">
-        <img src="{{ site.baseurl }}/img/portfolio/bui.jpg" alt="BUI Pattern Library for Decipher">
-        <h3>Decipher Inc. Pattern Library</h3>
-        <p class="wi-desc">Created for Decipher Inc. (now FocusVision), BUI was the first pattern library I created.</p>
-      </a>
-    </div>
-  </div>
-</div>
+</section>
