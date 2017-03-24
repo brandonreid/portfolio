@@ -112,8 +112,10 @@ a.wild-item {
 }
 
 .wi-flex {
-  &,
-  & > div {
-    display: flex;
+  @media @bp {
+    &,
+    & > div {
+      display: flex;
+    }
   }
 }
