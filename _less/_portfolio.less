@@ -1,3 +1,4 @@
+// Case Studies
 .case-studies {
   padding-bottom: 3.375em;
 }
@@ -64,5 +65,55 @@
 .to-be-continued {
   &:hover {
     border-color: @clr-frame;
+  }
+}
+
+// Stuff in the Wild
+.wild-items {
+  padding-bottom: 5em;
+  p.desc {
+    margin-top: 0;
+    font-style: italic;
+  }
+  h2 {
+    margin-top: 1em;
+    text-transform: uppercase;
+  }
+}
+
+a.wild-item {
+  background-color: white;
+  border: 2px solid @clr-frame;
+  color: @clr-text;
+  display: block;
+  img {
+    border-bottom: 2px solid @clr-frame;
+  }
+  h3 {
+    color: @clr-link;
+    font-size: 1.125rem;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0.5em 1em 0em;
+  }
+  .wi-desc {
+    line-height: 1.4em;
+    margin-top: 0;
+    padding: 0 1em 1em;
+  }
+  &:hover,
+  &:focus {
+    border-color: @clr-link;
+    text-decoration: none;
+    h2 {
+      text-decoration: underline;
+    }
+  }
+}
+
+.wi-flex {
+  &,
+  & > div {
+    display: flex;
   }
 }
