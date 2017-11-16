@@ -100,6 +100,9 @@ a.wild-item {
     line-height: 1.4em;
     margin-top: 0;
     padding: 0 1em 1em;
+    em {
+      font-size: 0.8em;
+    }
   }
   &:hover,
   &:focus {
@@ -115,6 +118,9 @@ a.wild-item {
 }
 
 .wi-flex {
+  & + & {
+    margin-top: 1em;
+  }
   @media @bp {
     &,
     & > div {
