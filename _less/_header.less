@@ -1,23 +1,45 @@
 .main-header {
   border-top: 4px solid @clr-accent;
-  a.logo {
-    width: 81px;
-    display: block;
-    margin: 1em auto;
-    svg {
-      width: 81px;
-      height: 117px;
-    }
-    .shape {
-      fill: @clr-logo;
-      stroke: darken(@clr-logo, 7);
+  .logo {
+    text-align: center;
+    a {
+      color: white;
+      transform: rotate(-0.8deg);
+      display: inline-block;
+      position: relative;
+      &:after {
+        content: ' ';
+        background-color: @clr-accent;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        transform: rotate(0.5deg);
+      }
+      &:before {
+        content: ' ';
+        border-bottom: 2px dashed @clr-accent;
+        position: absolute;
+        bottom: 30%;
+        left: -2em;
+        right: -5em;
+        transform: rotate(0.3deg);
+        z-index: -1;
+      }
     }
   }
   p {
+    font-size: 0.9em;
+    color: @clr-accent;
     text-align: center;
-    margin-bottom: 1em;
+    font-weight: light;
+    margin-top: -0.25em;
+    margin-bottom: 2.128em;
     padding-left: 1em;
     padding-right: 1em;
+    transform: perspective(100px) rotateY(1deg);
   }
   nav {
     display: block;
@@ -32,7 +54,9 @@
       }
       &.active {
         color: @clr-text;
-        border-bottom: 2px solid @clr-text;
+        border-bottom: 4px dashed @clr-text;
+        transform: scale(1.44) rotate(-1.444444deg);
+        text-shadow: -4px -7px 0 darken(@clr-bg, 10);
       }
     }
   }
