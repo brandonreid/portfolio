@@ -30,16 +30,27 @@
       }
     }
   }
-  p {
-    font-size: 0.9em;
-    color: @clr-accent;
+  .p {
     text-align: center;
-    font-weight: light;
-    margin-top: -0.25em;
-    margin-bottom: 2.128em;
-    padding-left: 1em;
-    padding-right: 1em;
-    transform: perspective(100px) rotateY(1deg);
+    p {
+      border: 7px solid lighten(@clr-accent, 40);
+      font-size: 0.9em;
+      font-weight: 700;
+      color: @clr-accent;
+      display: inline-block;
+      margin-top: -0.25em;
+      margin-bottom: 3.333em;
+      padding-left: 1em;
+      padding-right: 1em;
+      transform: rotate(-0.75deg);
+      span {
+        font-weight: 300;
+        color: lighten(@clr-accent, 40);
+        display: inline-block;
+        margin: 0 0.333em;
+        transform: scale(2.333);
+      }
+    }
   }
   nav {
     display: block;
@@ -47,10 +58,11 @@
     margin-bottom: 1.333em;
     a {
       font-family: @font-family-headers;
+      font-weight: bold;
       text-transform: uppercase;
       display: inline-block;
       & + a {
-        margin-left: 1.5em;
+        margin-left: 2.333em;
       }
       &.active {
         color: @clr-text;
