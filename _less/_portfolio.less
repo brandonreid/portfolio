@@ -1,5 +1,6 @@
 // Case Studies
 .case-studies {
+  background-color: lighten(@clr-bg, 2);
   border-top: 1px dashed @clr-frame;
   padding: 2.5em 0 5em;
   margin-bottom: 1em;
@@ -7,7 +8,7 @@
 
 .case-study {
   background-color: @clr-frame;
-  border: 2px solid @clr-frame;
+  border: 8px solid @clr-frame;
   color: @clr-text;
   text-decoration: none;
   text-align: center;
@@ -42,10 +43,12 @@
   & + & {
     margin-top: 1em;
   }
+  background: linea
 }
 
 .faa {
-  background: linear-gradient(160deg, @clr-text 0%,#1c8c8b 100%);
+  background: #004673;
+  box-shadow: inset -12px -12px 0 20px fadeOut(@clr-bg, 60);
   position: relative;
   h2, p {
     color: white;
@@ -58,17 +61,23 @@
     background: url("../img/portfolio/repeat-survey-icons.png");
     background-size: 132px 132px;
     background-position: center center;
+    opacity: 0.333;
+    transform: translate(8px, 8px);
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
   }
+  &:hover,
+  &:focus {
+    box-shadow: inset -12px -12px 0 20px fadeOut(@clr-bg, 70);
+  }
 }
 
 // Stuff in the Wild
 .wild-items {
-  background-color: white;
+  background-color: lighten(@clr-bg, 5);
   padding: 3.325em 0;
   p.desc {
     margin-top: 0;
@@ -84,11 +93,18 @@
 a.wild-item {
   background-color: white;
   border: 2px solid fadeOut(@clr-frame, 40);
+  border-bottom-width: 5px;
   color: @clr-text;
   display: block;
   position: relative;
   transition: transform 300ms ease;
-  img { border-bottom: 2px solid @clr-frame; }
+  img {
+    background-color: darken(@clr-bg, 5);
+    border-bottom: 2px solid @clr-frame;
+    box-shadow: inset 0 1px 6px 0 fadeOut(black, 40),
+                inset 0 0 0 0.5em @clr-frame;
+    padding: 1em 1em 0;
+  }
   h3 {
     color: @clr-link;
     font-size: 1.125rem;
@@ -111,6 +127,9 @@ a.wild-item {
     transform: scale(1.02);
     box-shadow: 0 3px 7px 0 fadeOut(black, 70);
     z-index: 20;
+    img {
+      border-bottom-color: @clr-link;
+    }
     h2 {
       text-decoration: underline;
     }

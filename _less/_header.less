@@ -1,23 +1,38 @@
 .main-header {
   border-top: 4px solid @clr-accent;
-  a.logo {
-    width: 81px;
-    display: block;
-    margin: 1em auto;
-    svg {
-      width: 81px;
-      height: 117px;
-    }
-    .shape {
-      fill: @clr-logo;
-      stroke: darken(@clr-logo, 7);
+  .logo {
+    text-align: right;
+    a {
+      color: white;
+      transform: rotate(-0.8deg);
+      display: inline-block;
+      position: relative;
+      &:after {
+        content: ' ';
+        background-color: @clr-accent;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        transform: rotate(0.5deg);
+      }
+      &:before {
+        content: ' ';
+        border-bottom: 2px dashed @clr-accent;
+        position: absolute;
+        bottom: 30%;
+        left: -3.5em;
+        right: 0;
+        transform: rotate(0.3deg);
+        z-index: -1;
+      }
     }
   }
-  p {
-    text-align: center;
-    margin-bottom: 1em;
-    padding-left: 1em;
-    padding-right: 1em;
+  .p {
+    text-align: right;
+    margin-bottom: 3em;
   }
   nav {
     display: block;
@@ -25,14 +40,17 @@
     margin-bottom: 1.333em;
     a {
       font-family: @font-family-headers;
+      font-weight: bold;
       text-transform: uppercase;
       display: inline-block;
       & + a {
-        margin-left: 1.5em;
+        margin-left: 2.333em;
       }
       &.active {
         color: @clr-text;
-        border-bottom: 2px solid @clr-text;
+        border-bottom: 4px dashed @clr-text;
+        transform: scale(1.44) rotate(-1.444444deg);
+        text-shadow: -4px -7px 0 darken(@clr-bg, 10);
       }
     }
   }
