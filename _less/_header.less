@@ -8,6 +8,7 @@
       transform: rotate(-0.8deg);
       display: inline-block;
       position: relative;
+      text-shadow: 3px 3px 0 darken(@clr-accent, 3);
       &:after {
         content: ' ';
         background-color: @clr-accent;
@@ -21,7 +22,7 @@
       }
       &:before {
         content: ' ';
-        border-bottom: 2px dashed @clr-accent;
+        border-bottom: 3px dashed @clr-accent;
         position: absolute;
         bottom: 30%;
         left: -3.5em;
@@ -50,8 +51,12 @@
       &.active {
         color: @clr-text;
         border-bottom: 4px dashed @clr-text;
-        transform: scale(1.44) rotate(-1.444444deg);
-        text-shadow: -4px -7px 0 darken(@clr-bg, 10);
+        transform: scale(1.3) rotate(-1.444444deg);
+        text-shadow: -4px -7px 0 black;
+        &:hover,
+        &:focus {
+          text-decoration: none;
+        }
       }
     }
   }
