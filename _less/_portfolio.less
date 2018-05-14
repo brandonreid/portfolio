@@ -1,8 +1,5 @@
 .introduction {
-  padding: 3em 0 6em;
-  min-height: ~"calc(100vh - 13em)";
-  display: flex;
-  align-items: center;
+  padding: 2.5em 0 6em;
   p {
     border: 3px dashed @clr-accent;
     background-color: lighten(@clr-bg, 10);
@@ -19,6 +16,37 @@
     img {
       display: inline-block;
       vertical-align: top;
+    }
+  }
+  img.bg {
+    display: none;
+  }
+  @media (min-width: 670px) {
+    min-height: ~"calc(100vh - 13em)";
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    .intro-content {
+      position: relative;
+      .brandon-photo,
+      & > p {
+        position: relative;
+      }
+      .brandon-photo {
+        z-index: 15;
+      }
+      p {
+        z-index: 10;
+      }
+      img.bg {
+        display: block;
+        position: absolute;
+        top: -7.5em;
+        max-width: initial;
+        width: 132%;
+        left: -19%;
+        opacity: 0.3;
+      }
     }
   }
 }
