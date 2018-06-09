@@ -1,3 +1,62 @@
+.introduction {
+  padding: 1em 0 4em;
+  border-bottom: 10px dashed #131415;
+  p {
+    border: 3px dotted @clr-accent;
+    background-color: @clr-bg;
+    padding: 1.688em;
+    border-radius: 0 4em;
+    position: relative;
+    box-shadow: 5px 5px 0 5px darken(@clr-accent, 17),
+                5px 8px 0 0 black;
+  }
+  .brandon-photo {
+    border: 3px solid @clr-bg;
+    border-top-width: 0;
+    border-left-width: 0;
+    float: left;
+    width: 6.333em;
+    height: 6.333em;
+    margin-right: 0.5em;
+    position: relative;
+    top: -4px;
+    left: -4px;
+    z-index: 20;
+    img {
+      display: inline-block;
+      vertical-align: top;
+    }
+  }
+  @media (min-width: 670px) {
+    min-height: ~"calc(100vh - 17.086em)";
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    .brandon-photo {
+      position: relative;
+      z-index: 15;
+    }
+    p {
+      position: relative;
+      z-index: 10;
+    }
+    .intro-container {
+      &:before {
+        content: ' ';
+        background-image: url('/img/intro-bg.svg');
+        background-repeat: no-repeat;
+        display: block;
+        position: absolute;
+        top: -4.5em;
+        bottom: -5.5em;
+        left: -8.2em;
+        right: -7em;
+        opacity: 0.3;
+      }
+    }
+  }
+}
+
 // Case Studies
 .case-studies {
   background-color: lighten(@clr-bg, 2);
@@ -11,25 +70,21 @@
   border: 8px solid @clr-frame;
   color: @clr-text;
   text-decoration: none;
-  text-align: center;
   display: block;
   padding: 5em 1em;
+  max-width: 43.249em;
+  margin: 0 auto;
   transition: transform 300ms ease;
   h2 {
     line-height: 1.4em;
     text-transform: uppercase;
   }
   p.read-on {
-    span {
-      background-color: @clr-button;
-      border: 1px solid @clr-frame;
-      border-radius: 4px;
-      color: @clr-text;
-      text-shadow: none;
-      padding: 0.125em 0.5em 0.125em 0.667em;
-      display: inline-block;
-      i:before { margin-right: 0; }
-    }
+    text-decoration: underline;
+    display: inline-block;
+    background-color: @clr-bg;
+    padding: 0 0.222em;
+    color: @clr-link;
   }
   &:hover,
   &:focus {
@@ -37,7 +92,7 @@
     text-decoration: none;
     transform: scale(1.02);
     p.read-on span {
-      color: @clr-link;
+      color: lighten(@clr-link, 5);
     }
   }
   & + & {
@@ -52,7 +107,6 @@
   position: relative;
   h2, p {
     color: white;
-    text-shadow: 0 1px 2px @clr-text;
     position: relative;
     z-index: 10;
   }
@@ -78,11 +132,11 @@
 // Stuff in the Wild
 .wild-items {
   background-color: lighten(@clr-bg, 5);
-  padding: 3.325em 0;
+  padding: 3.325em 1em;
   p.desc {
     margin-top: 0;
-    font-style: italic;
     margin-bottom: 1em;
+    max-width: 43.249em;
   }
   h2 {
     margin-top: 1em;
@@ -90,14 +144,29 @@
   }
 }
 
+.wild-item-tiles {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 a.wild-item {
   background-color: white;
   border: 2px solid fadeOut(@clr-frame, 40);
   border-bottom-width: 5px;
-  color: @clr-text;
+  color: @clr-text-dark;
   display: block;
   position: relative;
   transition: transform 300ms ease;
+  flex-grow: 1;
+  max-width: 100%;
+  @media (min-width: 768px) {
+    max-width: 50%;
+  }
+  @media (min-width: 935px) {
+    width: 0;
+    min-width: 28.833em;
+  }
   img {
     background-color: darken(@clr-bg, 5);
     border-bottom: 2px solid @clr-frame;
@@ -115,10 +184,15 @@ a.wild-item {
   .wi-desc {
     line-height: 1.4em;
     margin-top: 0;
-    padding: 0 1em 1em;
+    padding: 0 1em;
     em {
       font-size: 0.8em;
     }
+  }
+  .wi-linky {
+    color: @clr-link;
+    padding: 0 1em 1em;
+    text-decoration: underline;
   }
   &:hover,
   &:focus {
