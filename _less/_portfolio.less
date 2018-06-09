@@ -1,10 +1,14 @@
 .introduction {
-  padding: 3em 0 6em;
+  padding: 2em 0 4em;
   border-bottom: 10px dashed #131415;
   p {
-    border: 3px dashed @clr-accent;
+    border: 3px dotted @clr-accent;
     background-color: @clr-bg;
-    box-shadow: 5px 8px 0 0 black;
+    padding: 1.688em;
+    border-radius: 0 4em;
+    position: relative;
+    box-shadow: 5px 5px 0 5px darken(@clr-accent, 17),
+                5px 8px 0 0 black;
   }
   .brandon-photo {
     border: 3px solid @clr-bg;
@@ -14,13 +18,17 @@
     width: 6.333em;
     height: 6.333em;
     margin-right: 0.5em;
+    position: relative;
+    top: -4px;
+    left: -4px;
+    z-index: 20;
     img {
       display: inline-block;
       vertical-align: top;
     }
   }
   @media (min-width: 670px) {
-    min-height: ~"calc(100vh - 13em)";
+    min-height: ~"calc(100vh - 17.086em)";
     display: flex;
     align-items: center;
     overflow: hidden;
@@ -39,10 +47,10 @@
         background-repeat: no-repeat;
         display: block;
         position: absolute;
-        top: -6.5em;
+        top: -4.5em;
         bottom: -5.5em;
-        left: -5.2em;
-        right: -4em;
+        left: -8.2em;
+        right: -7em;
         opacity: 0.3;
       }
     }
@@ -65,6 +73,7 @@
   display: block;
   padding: 5em 1em;
   max-width: 43.249em;
+  margin: 0 auto;
   transition: transform 300ms ease;
   h2 {
     line-height: 1.4em;
