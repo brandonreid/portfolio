@@ -164,8 +164,10 @@ a.wild-item {
     max-width: 50%;
   }
   @media (min-width: 935px) {
-    width: 0;
-    min-width: 28.833em;
+    max-width: 33.33%;
+    .websites & {
+      max-width: 25%;
+    }
   }
   img {
     background-color: darken(@clr-bg, 5);
@@ -206,6 +208,23 @@ a.wild-item {
     }
     h2 {
       text-decoration: underline;
+    }
+  }
+  &.bonus {
+    position: relative;
+    overflow: hidden;
+    margin-top: 1em;
+    .bonus-flag {
+      background-color: @clr-accent;
+      font-weight: bold;
+      display: inline-block;
+      vertical-align: middle;
+      padding: 0.25em 5em;
+      transform: rotate(26deg);
+      position: absolute;
+      right: -4.5em;
+      top: 0.25em;
+      box-shadow: 0 2px 2px 0 rgba(0,0,0,0.5);
     }
   }
 }
