@@ -1,0 +1,101 @@
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: $baseFont;
+  font-weight: 400;
+}
+
+a {
+  cursor: pointer;
+  color: $link;
+  text-decoration: none;
+  &:hover,
+  &:focus {
+    color: darken($link, 5);
+    text-decoration: underline;
+  }
+}
+
+p, time, a, em, strong {
+  font-family: $baseFont;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $headerFont;
+  margin: 0;
+  line-height: 1.6em;
+  & + p,
+  & + ul,
+  & + ol {
+    margin-top: 0.75em;
+  }
+  p + &,
+  ul + &,
+  ol + &,
+  & + & {
+    margin-top: 1em;
+  }
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+p {
+  line-height: 1.6em;
+  margin: 0;
+  & + p {
+    margin-top: 0.5em;
+  }
+}
+
+ul, ol {
+  margin: 0;
+  padding-left: 2em;
+  li {
+    line-height: 1.4em;
+    & + li {
+      margin-top:  0.5em;
+    }
+  }
+  p + &,
+  & + p,
+  & + & {
+    margin-top: 0.75em;
+  }
+}
+
+
+// Helper Classes
+.left {
+  text-align: left;
+}
+.center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  &.inline {
+    display: inline-block;
+  }
+}
+
+.flush {
+  margin: 0;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
