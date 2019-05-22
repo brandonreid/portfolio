@@ -570,13 +570,15 @@ p.inline, h1.inline, h2.inline, h3.inline, h4.inline, h5.inline, h6.inline {
   background-color: #0c1f47;
   position: relative;
   overflow: hidden; }
-  .shared-nav-wrapper p {
+  .shared-nav-wrapper a.brandon {
     float: left;
     font-family: "Staatliches", cursive;
     font-size: 2.3em;
     line-height: 1.15em;
     color: #d1f9da;
-    margin: 0; }
+    margin: 0;
+    cursor: default;
+    text-decoration: none; }
   .shared-nav-wrapper .octogon {
     position: absolute;
     width: 200px;
@@ -615,13 +617,16 @@ footer {
     footer nav ul {
       list-style: none; }
     footer nav a {
-      font-size: 51px;
+      font-size: 32px;
       line-height: 1em;
       font-family: "Staatliches", cursive; }
       footer nav a:after {
         content: " ->"; }
       footer nav a.external:after {
         content: " -->"; }
+      @media (min-width: 580px) {
+        footer nav a {
+          font-size: 51px; } }
 
 .portfolio-top {
   background-color: #0c1f47;
@@ -702,7 +707,13 @@ footer {
       fill: #f4d7ec; }
   .portfolio-top nav {
     position: relative;
-    z-index: 100; }
+    z-index: 100;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
     .portfolio-top nav ul {
       list-style: none;
       margin: 0;
@@ -918,15 +929,10 @@ footer {
       -ms-flex: 1;
       flex: 1;
       text-align: center; }
-      .portfolio-pieces .empty-portfolio-item .dude-walken svg {
+      .portfolio-pieces .empty-portfolio-item .dude-walken img {
         height: 100%;
+        max-height: 390px;
         width: auto; }
-        .portfolio-pieces .empty-portfolio-item .dude-walken svg .body {
-          fill: #0c1f47; }
-        .portfolio-pieces .empty-portfolio-item .dude-walken svg .back-arm {
-          fill: #d1f9da; }
-        .portfolio-pieces .empty-portfolio-item .dude-walken svg .front-arm {
-          fill: #f4d7ec; }
     @media (min-width: 580px) {
       .portfolio-pieces .empty-portfolio-item {
         width: calc(50% - 1em);
@@ -1164,16 +1170,18 @@ footer {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center; }
-    .faa-initial-design .mockups img {
+    .faa-initial-design .mockups div {
       display: inline-block;
       margin-left: 1em;
       width: calc(50% - 1em);
       max-width: 12em;
       margin-bottom: 1em; }
+      .faa-initial-design .mockups div img {
+        width: 100%; }
   @media (min-width: 768px) {
     .faa-initial-design h3 {
       font-size: 4vw; }
-    .faa-initial-design .mockups img {
+    .faa-initial-design .mockups div {
       width: calc(25% - 1em); } }
 
 .faa-building {
@@ -1263,18 +1271,20 @@ footer {
     margin-left: -1em;
     padding-left: 1em;
     padding-right: 1em; }
-    .faa-introducing .phone-imgs img {
+    .faa-introducing .phone-imgs div {
       margin-left: 1em;
       width: calc(50% - 1em);
       margin-bottom: 1em; }
+      .faa-introducing .phone-imgs div img {
+        width: 100%; }
     @media (min-width: 768px) {
-      .faa-introducing .phone-imgs img {
+      .faa-introducing .phone-imgs div {
         width: calc(33.33% - 1em); } }
     @media (min-width: 900px) {
       .faa-introducing .phone-imgs {
         -ms-flex-wrap: nowrap;
         flex-wrap: nowrap; }
-        .faa-introducing .phone-imgs img {
+        .faa-introducing .phone-imgs div {
           width: auto; } }
   .faa-introducing .in-ipad {
     display: block;
