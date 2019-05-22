@@ -84,6 +84,8 @@
   nav {
     position: relative;
     z-index: 100;
+    display: flex;
+    align-items: center;
     ul {
       list-style: none;
       margin: 0;
@@ -310,18 +312,10 @@
     .dude-walken {
       flex: 1;
       text-align: center;
-      svg {
+      img {
         height: 100%;
+        max-height: 390px;
         width: auto;
-        .body {
-          fill: $darkBlue;
-        }
-        .back-arm {
-          fill: $spark;
-        }
-        .front-arm {
-          fill: $blits;
-        }
       }
     }
     @media (min-width: $mnbp) {
