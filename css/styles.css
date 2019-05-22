@@ -447,7 +447,7 @@ p, time, a, em, strong {
   font-family: "Montserrat", sans-serif; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Staatliches", cursive;
+  font-family: "Staatliches", sans-serif;
   margin: 0;
   line-height: 1.6em; }
   h1 + p,
@@ -572,7 +572,7 @@ p.inline, h1.inline, h2.inline, h3.inline, h4.inline, h5.inline, h6.inline {
   overflow: hidden; }
   .shared-nav-wrapper a.brandon {
     float: left;
-    font-family: "Staatliches", cursive;
+    font-family: "Staatliches", sans-serif;
     font-size: 2.3em;
     line-height: 1.15em;
     color: #d1f9da;
@@ -591,7 +591,7 @@ p.inline, h1.inline, h2.inline, h3.inline, h4.inline, h5.inline, h6.inline {
       fill: #f4d7ec; }
   .shared-nav-wrapper nav a {
     font-size: 2.3em;
-    font-family: "Staatliches", cursive;
+    font-family: "Staatliches", sans-serif;
     position: relative;
     z-index: 20; }
     .shared-nav-wrapper nav a:after {
@@ -619,7 +619,7 @@ footer {
     footer nav a {
       font-size: 32px;
       line-height: 1em;
-      font-family: "Staatliches", cursive; }
+      font-family: "Staatliches", sans-serif; }
       footer nav a:after {
         content: " ->"; }
       footer nav a.external:after {
@@ -643,7 +643,7 @@ footer {
     color: #d1f9da;
     line-height: 1em;
     position: relative;
-    z-index: 100; }
+    z-index: 200; }
     .portfolio-top h1 span {
       color: #040d1f; }
     @media (min-width: 580px) {
@@ -723,7 +723,7 @@ footer {
       text-align: center; }
   .portfolio-top a {
     font-size: 2em;
-    font-family: "Staatliches", cursive;
+    font-family: "Staatliches", sans-serif;
     color: rgba(4, 13, 31, 0.65);
     display: inline-block;
     padding: 0.5em 0.75em;
@@ -805,7 +805,7 @@ footer {
       display: none; }
     .portfolio-pieces .title-row.-w-link a {
       font-size: 51px;
-      font-family: "Staatliches", cursive;
+      font-family: "Staatliches", sans-serif;
       display: inline-block;
       vertical-align: middle; }
       .portfolio-pieces .title-row.-w-link a:after {
@@ -1114,7 +1114,7 @@ footer {
     -webkit-transform: rotate(-1deg);
     transform: rotate(-1deg); }
   .faa-designing blockquote {
-    font-family: "Staatliches", cursive;
+    font-family: "Staatliches", sans-serif;
     font-size: 1.5em;
     margin-top: 1em;
     line-height: 1.4em; }
@@ -1238,9 +1238,7 @@ footer {
     .faa-building .faa-copy-paste-title {
       margin-top: 5em; }
     .faa-building .faa-copy-paste {
-      margin-bottom: 5em; }
-    .faa-building .faa-blanks {
-      margin-top: 5em; } }
+      margin-bottom: 5em; } }
 
 .faa-introducing {
   background-color: #0c1f47;
