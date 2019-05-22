@@ -1,0 +1,351 @@
+.portfolio-top {
+  background-color: $darkBlue;
+  position: relative;
+  z-index: 20;
+  padding-bottom: 2em;
+  @media (min-width: $smbp) {
+    height: calc(50vh + 250px);
+    min-height: 550px;
+    padding-bottom: 0;
+  }
+
+  h1 {
+    font-size: 19vw;
+    color: $spark;
+    line-height: 1em;
+    position: relative;
+    z-index: 100;
+    span {
+      color: #040d1f;
+    }
+    @media (min-width: $mnbp) {
+      font-size: 9vw;
+    }
+    @media (min-width: $mdbp) {
+      font-size: 3.2vw;
+    }
+  }
+
+  // Navigation Octogon
+  .nav-wrapper {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: 2em auto 0;
+    z-index: 150;
+    @media (min-width: $mnbp) {
+      width: 500px;
+      height: 500px;
+    }
+    @media (min-width: $mdbp) {
+      // margin: calc(42% - 250px) auto 0;
+      margin-top: 0;
+      top: calc(55% - 250px);
+    }
+  }
+  .triangle {
+    position: absolute;
+    left: -100px;
+    top: -200px;
+    width: 400px;
+    height: 400px;
+    polygon {
+      fill: transparent;
+      stroke: $link;
+      stroke-width: 0.3;
+    }
+    @media (min-width: $mnbp) {
+      left: -300px;
+      top: -300px;
+      width: 600px;
+      height: 600px;
+    }
+  }
+  .big-octogon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    .small {
+      fill: $vibe;
+    }
+    .big {
+      fill: $blits;
+    }
+  }
+  nav {
+    position: relative;
+    z-index: 100;
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      display: block;
+      text-align: center;
+    }
+  }
+  a {
+    font-size: 2em;
+    font-family: $headerFont;
+    color: rgba($text, 0.65);
+    display: inline-block;
+    padding: 0.5em 0.75em;
+    text-decoration: none;
+    transform: scale(1);
+    transition: color 200ms ease, transform 200ms cubic-bezier(.74,.01,0,1.75);
+    &:hover {
+      color: rgba($text, 1);
+      transform: scale(1.1);
+    }
+    &:after {
+      content: " ->";
+    }
+    &.active {
+      cursor: default;
+      color: $text;
+      border: 3px solid $blits;
+      transform: none;
+      transition: none;
+      &:after {
+        content: "";
+      }
+    }
+    @media (min-width: $mnbp) {
+      font-size: 2.5em;
+    }
+  }
+
+  .dots {
+    position: absolute;
+    right: 0%;
+    bottom: -4em;
+    max-width: 100%;
+    z-index: 50;
+    @media (min-width: $mnbp) {
+      bottom: -8em;
+    }
+    @media (min-width: $smbp) {
+      bottom: -20vh;
+      max-width: 60%;
+    }
+  }
+
+  .divider {
+    width: 100vw;
+    height: auto;
+    position: absolute;
+    top: 99.9%;
+    left: 0;
+    right: 0;
+    .area {
+      fill: $darkBlue;
+    }
+    .line {
+      fill: $sparkle;
+    }
+  }
+}
+
+
+.portfolio-pieces {
+  padding-bottom: 3em;
+  overflow: hidden;
+  position: relative;
+  h2 {
+    font-size: 12vw;
+    text-align: right;
+    margin-top: 10vw;
+    margin-bottom: 1rem;
+    @media (min-width: $smbp) {
+      font-size: 6.5vw;
+      margin-top: 5.5vw;
+      margin-bottom: 13rem;
+    }
+  }
+  .title-row {
+    margin-bottom: 2em;
+    position: relative;
+    z-index: 50;
+    h3 {
+      font-size: 51px;
+    }
+    p {
+      font-size: 24px;
+      margin: 0;
+    }
+    &.-w-link {
+      .separator {
+        display: none;
+      }
+      a {
+        font-size: 51px;
+        font-family: $headerFont;
+        display: inline-block;
+        vertical-align: middle;
+        &:after {
+          content: " ->";
+        }
+      }
+    }
+    @media (min-width: $mnbp) {
+      margin-bottom: 5em;
+      p {
+        span {
+          display: block;
+        }
+      }
+    }
+    @media (min-width: 960px) {
+      h3, p {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0;
+      }
+      p {
+        margin-left: 1em;
+      }
+      &.-w-link {
+        display: flex;
+        align-items: center;
+        .separator {
+          flex: 1;
+          display: inline-block;
+          vertical-align: middle;
+          height: 1px;
+          margin: 0 1.5em;
+          background-color: $link;
+        }
+      }
+    }
+  }
+  .portfolio-list {
+    margin-bottom: 6em;
+    position: relative;
+    z-index: 50;
+    @media (min-width: $mnbp) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-left: -1em;
+    }
+  }
+  .portfolio-item {
+    background-color: #f2f5f7;
+    border-radius: 18px;
+    max-width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    overflow: hidden;
+    text-decoration: none;
+    margin-bottom: 1em;
+    position: relative;
+    box-shadow: 0 0 12px 0px rgba($darkBlue, 0);
+    transform: translateY(0px);
+    transition: box-shadow 200ms ease, transform 100ms ease;
+    img {
+      display: inline-block;
+      vertical-align: top;
+    }
+    h4 {
+      border-top: 3px solid $link;
+      font-size: 28px;
+      text-align: center;
+      padding: 0.3em 0;
+      &:after {
+        content: " -->";
+      }
+    }
+    p {
+      color: $text;
+      font-size: 21px;
+      margin-top: 0;
+      padding: 0 2em 2em;
+    }
+    &:hover {
+      z-index: 100;
+      box-shadow: 0 5px 28px -5px rgba($darkBlue, 0.5);
+      transform: translateY(-5px);
+      h4 {
+        text-decoration: underline;
+      }
+    }
+    @media (min-width: $mnbp) {
+      width: calc(50% - 1em);
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 0 1em 1em;
+    }
+    @media (min-width: $lgbp) {
+      width: calc(33% - 1em);
+      margin: 0 0 3.5em 1em;
+    }
+  }
+  .empty-portfolio-item {
+    background-color: #fafbfc;
+    border-radius: 18px;
+    min-height: 260px;
+    width: 100%;
+    max-width: 100%;
+    display: inline-flex;
+    vertical-align: top;
+    flex-direction: column;
+    .mini-octogon {
+      width: 41px;
+      height: 41px;
+      margin: 1em;
+      polygon {
+        fill: $spark;
+      }
+    }
+    .dude-walken {
+      flex: 1;
+      text-align: center;
+      svg {
+        height: 100%;
+        width: auto;
+        .body {
+          fill: $darkBlue;
+        }
+        .back-arm {
+          fill: $spark;
+        }
+        .front-arm {
+          fill: $blits;
+        }
+      }
+    }
+    @media (min-width: $mnbp) {
+      width: calc(50% - 1em);
+      margin: 0 0 1em 1em;
+    }
+    @media (min-width: $lgbp) {
+      width: calc(33% - 1em);
+      margin: 0 0 3.5em 1em;
+    }
+  }
+  .big-octogon {
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    bottom: -500px;
+    left: -500px;
+    .small {
+      fill: $spark;
+    }
+    .big {
+      fill: transparent;
+      stroke: $vibe;
+      stroke-width: 0.5;
+    }
+  }
+}

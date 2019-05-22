@@ -1,10 +1,7 @@
 var gulp = require('gulp');
 var runSequence = require('run-sequence');
-var less = require('gulp-less');
-var LessAutoprefix = require('less-plugin-autoprefix'),
-    autoprefix = new LessAutoprefix({ browsers: ['last 4 versions'] });
-var LessPluginCleanCSS = require('less-plugin-clean-css'),
-    cleanCSSPlugin = new LessPluginCleanCSS({advanced: true});
+const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
 var connect = require('gulp-connect');
 var shell = require('gulp-shell');
 
@@ -12,12 +9,14 @@ gulp.task('jekyll', shell.task([
   'jekyll build',
 ]));
 
-gulp.task('less', function () {
-  return gulp.src(['./_less/styles.less'])
-    .pipe(less({
-      plugins: [autoprefix, cleanCSSPlugin]
-    }))
-    .pipe(gulp.dest('./css/'));
+gulp.task('sass', function() {
+  return gulp.src(['./scss/styles.scss'])
+      .pipe(sass())
+      .pipe(autoprefixer({
+          browsers: ['last 2 versions'],
+          cascade: false
+      }))
+      .pipe(gulp.dest("./css"));
 });
 
 // gulp.task('fonts', function () {
@@ -41,7 +40,7 @@ gulp.task('reload', function () {
 });
 
 gulp.task('rebuild', function(callback) {
-  runSequence('less',
+  runSequence('sass',
               'jekyll',
               ['reload'],
               callback);
@@ -53,7 +52,7 @@ gulp.task('watch', function () {
               './_config.yml',
               './_includes/*.*',
               './_layouts/*.*',
-              './_less/**/*.*',
+              './scss/**/*.*',
               './_posts/**/*.*',
               './blog-images/**/*.*',
               './js/**/*.*'], ['rebuild']);
@@ -63,7 +62,7 @@ gulp.task('watch', function () {
 // Dev Mode
 
 gulp.task('dev', function(callback) {
-  runSequence(['less'],
+  runSequence(['sass'],
               'jekyll',
               ['server', 'watch'],
               callback);

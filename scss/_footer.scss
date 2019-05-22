@@ -1,0 +1,40 @@
+footer {
+  background-color: $darkBlue;
+  display: block;
+  padding: 11em 0 8em;
+  position: relative;
+
+  svg.separator {
+    width: 100vw;
+    height: auto;
+    position: absolute;
+    top: -5px;
+    left: 0;
+    .blits {
+      fill: $blits;
+    }
+    .vibe {
+      fill: $vibe;
+    }
+  }
+
+  nav {
+    text-align: right;
+    ul {
+      list-style: none;
+    }
+    li {
+    }
+    a {
+      font-size: 51px;
+      line-height: 1em;
+      font-family: $headerFont;
+      &:after {
+        content: " ->";
+      }
+      &.external:after {
+        content: " -->";
+      }
+    }
+  }
+}

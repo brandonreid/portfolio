@@ -1,0 +1,36 @@
+.shared-nav-wrapper {
+  text-align: right;
+  background-color: $darkBlue;
+  position: relative;
+  overflow: hidden;
+  p {
+    float: left;
+    font-family: $headerFont;
+    font-size: 2.3em;
+    line-height: 1.15em;
+    color: $spark;
+    margin: 0;
+  }
+  .octogon {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    right: -100px;
+    top: -80px;
+    .small {
+      fill: $vibe;
+    }
+    .big {
+      fill: $blits;
+    }
+  }
+  nav a {
+    font-size: 2.3em;
+    font-family: $headerFont;
+    position: relative;
+    z-index: 20;
+    &:after {
+      content: " ->";
+    }
+  }
+}
