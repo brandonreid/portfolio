@@ -2,6 +2,7 @@
   background-color: $darkBlue;
   height: calc(50vh + 250px);
   position: relative;
+  z-index: 20;
 
   h1 {
     font-size: 3.2vw;
