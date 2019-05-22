@@ -565,6 +565,36 @@ p.inline, h1.inline, h2.inline, h3.inline, h4.inline, h5.inline, h6.inline {
   clip: rect(0, 0, 0, 0);
   border: 0; }
 
+.shared-nav-wrapper {
+  text-align: right;
+  background-color: #0c1f47;
+  position: relative;
+  overflow: hidden; }
+  .shared-nav-wrapper p {
+    float: left;
+    font-family: "Staatliches", cursive;
+    font-size: 2.3em;
+    line-height: 1.15em;
+    color: #d1f9da;
+    margin: 0; }
+  .shared-nav-wrapper .octogon {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    right: -100px;
+    top: -80px; }
+    .shared-nav-wrapper .octogon .small {
+      fill: #c3e8e6; }
+    .shared-nav-wrapper .octogon .big {
+      fill: #f4d7ec; }
+  .shared-nav-wrapper nav a {
+    font-size: 2.3em;
+    font-family: "Staatliches", cursive;
+    position: relative;
+    z-index: 20; }
+    .shared-nav-wrapper nav a:after {
+      content: " ->"; }
+
 footer {
   background-color: #0c1f47;
   display: block;
@@ -925,29 +955,74 @@ footer {
   .bio .container.constrained {
     max-width: 45.629em; }
 
-.about-photos {
-  margin-bottom: 5em; }
-  .about-photos:after {
-    content: "";
-    display: table;
-    clear: both; }
-  .about-photos img {
-    float: left;
-    width: 25%; }
+.about-photos:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+.about-photos img {
+  float: left;
+  width: 25%; }
+
+.field-audit-app {
+  font-size: 21px; }
+
+.faa-split .img-container {
+  margin-top: 1em; }
+
+@media (min-width: 768px) {
+  .faa-split {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row; }
+    .faa-split.-align {
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center; }
+    .faa-split .text-container {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1; }
+    .faa-split .img-container {
+      margin-top: 0;
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1; } }
 
 .faa-main-title {
   background-image: url("../img/field-auditing-app/map.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  color: white;
-  position: relative; }
+  position: relative;
+  background-color: #fafafa;
+  text-align: center;
+  padding: 5em 1em 3.325em; }
   .faa-main-title h1, .faa-main-title p {
     position: relative;
     z-index: 10; }
+  .faa-main-title h1 {
+    color: #f4d7ec;
+    font-weight: bold;
+    line-height: 1em; }
+    .faa-main-title h1 span {
+      color: #c3e8e6;
+      display: block;
+      font-size: 1.5rem;
+      font-weight: normal;
+      line-height: 1em;
+      margin-bottom: 1em; }
+  .faa-main-title p {
+    color: #c3e8e6;
+    max-width: 25.629em;
+    margin: 1em auto; }
   .faa-main-title:after {
     content: " ";
-    background-color: rgba(12, 31, 71, 0.2);
+    background-color: rgba(12, 31, 71, 0.8);
     display: block;
     position: absolute;
     top: 0;
@@ -955,19 +1030,23 @@ footer {
     width: 100%;
     height: 100%;
     z-index: 2; }
+  @media (min-width: 768px) {
+    .faa-main-title {
+      padding: 8.543em 1em 5.695em; }
+      .faa-main-title h1 {
+        font-size: 5vw; }
+      .faa-main-title p {
+        font-size: 1.25em; } }
 
 .faa-setting-stage {
-  padding: 5em 0; }
-  .faa-setting-stage h2 {
-    text-transform: uppercase; }
-  .faa-setting-stage img {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 25.629em; }
-  @media (max-width: 768px) {
-    .faa-setting-stage {
-      padding: 7.594em 0; } }
+  padding: 7.594em 0; }
+  .faa-setting-stage .img-container {
+    margin-top: 2em; }
+    .faa-setting-stage .img-container img {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 25.629em; }
 
 .faa-my-role {
   background-image: url("../img/field-auditing-app/typesetting-bg.jpg");
@@ -978,27 +1057,13 @@ footer {
   padding: 5em 0; }
   .faa-my-role h2 {
     text-transform: uppercase; }
+  .faa-my-role .img-container {
+    margin-top: 2em; }
   .faa-my-role img {
     display: block;
     margin: 0 auto;
     width: 100%;
     max-width: 25.625em; }
-  @media (max-width: 768px) {
-    .faa-my-role .row {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex; }
-      .faa-my-role .row .copy {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center; } }
 
 .faa-hit-list {
   padding: 3.325em 0; }
@@ -1023,8 +1088,8 @@ footer {
     max-width: 43.249em;
     -webkit-transform: rotate(-1deg) scale(1);
     transform: rotate(-1deg) scale(1);
-    -webkit-box-shadow: -1px 2px 6px 1px fadeOut(#040d1f, 0.7);
-    box-shadow: -1px 2px 6px 1px fadeOut(#040d1f, 0.7); }
+    -webkit-box-shadow: -1px 2px 48px 1px rgba(4, 13, 31, 0.3);
+    box-shadow: -1px 2px 48px 1px rgba(4, 13, 31, 0.3); }
   @media (max-width: 768px) {
     .faa-hit-list {
       padding: 7.5em 0; } }
@@ -1043,41 +1108,73 @@ footer {
     -webkit-transform: rotate(-1deg);
     transform: rotate(-1deg); }
   .faa-designing blockquote {
+    font-family: "Staatliches", cursive;
     font-size: 1.5em;
+    margin-top: 1em;
+    line-height: 1.4em; }
+  .faa-designing .flex-container {
     margin-top: 1em; }
-  @media (max-width: 768px) {
+  @media (min-width: 768px) {
     .faa-designing {
       padding: 5em 0 7.5em; }
       .faa-designing h2 {
         font-size: 3.375em; }
       .faa-designing blockquote {
         font-size: 1.531em;
-        margin-top: 3.797em; } }
+        margin-top: 3.797em; }
+      .faa-designing .flex-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+        flex-direction: row; }
+      .faa-designing .text-container {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1; }
+      .faa-designing .img-container {
+        margin-top: 0;
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1; } }
 
 .faa-initial-design {
-  background-color: white;
+  background-color: #0c1f47;
   color: #040d1f;
-  border-top: 2px solid grey;
-  border-bottom: 2px solid grey;
+  border-top: 8px solid #f4d7ec;
+  border-bottom: 8px solid #f4d7ec;
   padding: 3.325em 0; }
   .faa-initial-design h3 {
+    color: white;
     font-size: 1.5em;
     font-weight: normal;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 1em; }
-  .faa-initial-design img {
-    display: block;
-    margin: 0 auto 1em;
-    width: 100%;
-    max-width: 17em; }
-  @media (max-width: 768px) {
-    .faa-initial-design {
-      padding: 5em 0 7.5em; }
-      .faa-initial-design h3 {
-        font-size: 2.5em; }
-      .faa-initial-design img {
-        margin-bottom: 0; } }
+    margin-bottom: 1rem; }
+  .faa-initial-design .mockups {
+    margin-left: -1em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0 1em;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .faa-initial-design .mockups img {
+      display: inline-block;
+      margin-left: 1em;
+      width: calc(50% - 1em);
+      max-width: 12em;
+      margin-bottom: 1em; }
+  @media (min-width: 768px) {
+    .faa-initial-design h3 {
+      font-size: 4vw; }
+    .faa-initial-design .mockups img {
+      width: calc(25% - 1em); } }
 
 .faa-building {
   padding: 5em 0; }
@@ -1092,21 +1189,39 @@ footer {
     margin-top: 5em; }
   .faa-building .faa-before-after {
     margin-top: 1.17em; }
+    .faa-building .faa-before-after figure {
+      text-align: center; }
     .faa-building .faa-before-after img {
       display: block;
       width: 100%;
       max-width: 14em;
       margin: 1em auto 0; }
-  .faa-building .faa-copy-paste img {
-    display: block;
-    width: 100%;
-    max-width: 25.629em;
-    margin: 0 auto; }
-  .faa-building .faa-blanks figure {
-    max-width: 25.625em;
-    margin: 0 auto; }
-    .faa-building .faa-blanks figure + figure {
-      margin-top: 0.75em; }
+    @media (min-width: 1100px) {
+      .faa-building .faa-before-after .img-container {
+        -webkit-box-flex: 1.5;
+        -ms-flex: 1.5;
+        flex: 1.5;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex; } }
+  .faa-building .faa-copy-paste-title {
+    margin-top: 3em; }
+  .faa-building .faa-copy-paste {
+    margin-top: 1.17em; }
+    .faa-building .faa-copy-paste img {
+      display: block;
+      width: 100%;
+      max-width: 20em;
+      margin: 0 auto; }
+  .faa-building .faa-blanks-title {
+    margin-top: 3em; }
+  .faa-building .faa-blanks {
+    margin-top: 1.17em; }
+    .faa-building .faa-blanks figure {
+      max-width: 25.625em;
+      margin: 0 auto; }
+      .faa-building .faa-blanks figure + figure {
+        margin-top: 0.75em; }
   @media (max-width: 768px) {
     .faa-building h2 {
       font-size: 3.375em; }
@@ -1120,15 +1235,17 @@ footer {
       margin-top: 5em; } }
 
 .faa-introducing {
-  background-color: #040d1f;
-  background: linear-gradient(160deg, #143322 0%, #5a9f79 100%);
+  background-color: #0c1f47;
+  border-top: 16px solid #d1f9da;
+  border-bottom: 16px solid #d1f9da;
   padding: 2.25em 0 0;
   overflow: hidden; }
   .faa-introducing h2 {
     font-size: 2.25em;
     color: white;
     text-align: center;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    margin-bottom: 1.5rem; }
     .faa-introducing h2 span {
       font-weight: normal;
       display: block;
@@ -1137,32 +1254,33 @@ footer {
       font-size: 1.5rem; }
     .faa-introducing h2 span.tbi {
       font-size: 1.25rem; }
-  .faa-introducing .images img {
-    margin-bottom: 1em; }
+  .faa-introducing .phone-imgs {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-left: -1em;
+    padding-left: 1em;
+    padding-right: 1em; }
+    .faa-introducing .phone-imgs img {
+      margin-left: 1em;
+      width: calc(50% - 1em);
+      margin-bottom: 1em; }
+    @media (min-width: 768px) {
+      .faa-introducing .phone-imgs img {
+        width: calc(33.33% - 1em); } }
+    @media (min-width: 900px) {
+      .faa-introducing .phone-imgs {
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap; }
+        .faa-introducing .phone-imgs img {
+          width: auto; } }
   .faa-introducing .in-ipad {
     display: block;
-    margin: 1em auto 2em;
-    width: 100%;
+    margin: 1em auto -4em;
+    width: 90%;
     max-width: 38.443em; }
-  @media (max-width: 768px) {
-    .faa-introducing {
-      padding: 5em 0 0; }
-      .faa-introducing h2 {
-        font-size: 3.375em; }
-        .faa-introducing h2 span.int {
-          font-size: 2rem; }
-        .faa-introducing h2 span.tbi {
-          font-size: 1.5rem; }
-      .faa-introducing .images .one,
-      .faa-introducing .images .six {
-        -webkit-transform: scale(0.75);
-        transform: scale(0.75); }
-      .faa-introducing .images .two,
-      .faa-introducing .images .five {
-        -webkit-transform: scale(0.85);
-        transform: scale(0.85); }
-      .faa-introducing .in-ipad {
-        margin-bottom: -5em; } }
 
 .faa-what-i-learned {
   padding: 5em 0; }
@@ -1174,5 +1292,3 @@ footer {
     display: block;
     width: 100%;
     max-width: 20em; }
-  .faa-what-i-learned .back-link {
-    margin-top: 3.325em; }

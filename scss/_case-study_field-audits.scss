@@ -1,17 +1,61 @@
+.field-audit-app {
+  font-size: 21px;
+}
+
+.faa-split {
+  .img-container {
+    margin-top: 1em;
+  }
+  @media (min-width: $smbp) {
+    display: flex;
+    flex-direction: row;
+    &.-align {
+      align-items: center;
+    }
+    .text-container {
+      flex: 1;
+    }
+    .img-container {
+      margin-top: 0;
+      flex: 1;
+    }
+  }
+}
+
 .faa-main-title {
   background-image: url('../img/field-auditing-app/map.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  color: white;
   position: relative;
+  background-color: #fafafa;
+  text-align: center;
+  padding: 5em 1em 3.325em;
   h1, p {
     position: relative;
     z-index: 10;
   }
+  h1 {
+    color: $blits;
+    font-weight: bold;
+    line-height: 1em;
+    span {
+      color: $vibe;
+      display: block;
+      font-size: 1.5rem;
+      font-weight: normal;
+      line-height: 1em;
+      margin-bottom: 1em;
+    }
+  }
+  p {
+    color: $vibe;
+    max-width: 25.629em;
+    margin: 1em auto;
+  }
   &:after {
     content: " ";
-    background-color: rgba($darkBlue, 0.2);
+    background-color: rgba($darkBlue, 0.8);
     display: block;
     position: absolute;
     top: 0;
@@ -20,21 +64,27 @@
     height: 100%;
     z-index: 2;
   }
+  @media (min-width: $smbp) {
+    padding: 8.543em 1em 5.695em;
+    h1 {
+      font-size: 5vw;
+    }
+    p {
+      font-size: 1.25em;
+    }
+  }
 }
 
 .faa-setting-stage {
-  padding: 5em 0;
-  h2 {
-    text-transform: uppercase;
-  }
-  img {
-    display: block;
-    margin: 0 auto;
-    width: 100%;
-    max-width: 25.629em;
-  }
-  @media (max-width: 768px) {
-    padding: 7.594em 0;
+  padding: 7.594em 0;
+  .img-container {
+    margin-top: 2em;
+    img {
+      display: block;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 25.629em;
+    }
   }
 }
 
@@ -48,21 +98,14 @@
   h2 {
     text-transform: uppercase;
   }
+  .img-container {
+    margin-top: 2em;
+  }
   img {
     display: block;
     margin: 0 auto;
     width: 100%;
     max-width: 25.625em;
-  }
-  @media (max-width: 768px) {
-    .row {
-      display: flex;
-      .copy {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-      }
-    }
   }
 }
 
@@ -90,7 +133,7 @@
     display: block;
     max-width: 43.249em;
     transform: rotate(-1deg) scale(1);
-    box-shadow: -1px 2px 6px 1px fadeOut($text, 0.7);
+    box-shadow: -1px 2px 48px 1px rgba($text, 0.3);
   }
   @media (max-width: 768px) {
     padding: 7.5em 0;
@@ -112,10 +155,15 @@
     transform: rotate(-1deg);
   }
   blockquote {
+    font-family: $headerFont;
     font-size: 1.5em;
     margin-top: 1em;
+    line-height: 1.4em;
   }
-  @media (max-width: 768px) {
+  .flex-container {
+    margin-top: 1em;
+  }
+  @media (min-width: $smbp) {
     padding: 5em 0 7.5em;
     h2 {
       font-size: 3.375em;
@@ -124,32 +172,57 @@
       font-size: 1.531em;
       margin-top: 3.797em;
     }
+    .flex-container {
+      display: flex;
+      flex-direction: row;
+    }
+    .text-container {
+      flex: 1;
+    }
+    .img-container {
+      margin-top: 0;
+      flex: 1;
+    }
   }
 }
 
 .faa-initial-design {
-  background-color: white;
+  background-color: $darkBlue;
   color: $text;
-  border-top: 2px solid grey;
-  border-bottom: 2px solid grey;
+  border-top: 8px solid $blits;
+  border-bottom: 8px solid $blits;
   padding: 3.325em 0;
   h3 {
+    color: white;
     font-size: 1.5em;
     font-weight: normal;
     text-align: center;
     text-transform: uppercase;
-    margin-bottom: 1em;
+    margin-bottom: 1rem;
   }
-  img {
-    display: block;
-    margin: 0 auto 1em;
-    width: 100%;
-    max-width: 17em;
+  .mockups {
+    margin-left: -1em;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 1em;
+    justify-content: center;
+    img {
+      display: inline-block;
+      margin-left: 1em;
+      width: calc(50% - 1em);
+      max-width: 12em;
+      margin-bottom: 1em;
+    }
   }
-  @media (max-width: 768px) {
-    padding: 5em 0 7.5em;
-    h3 { font-size: 2.5em; }
-    img { margin-bottom: 0; }
+  @media (min-width: $smbp) {
+    h3 {
+      font-size: 4vw;
+    }
+    .mockups {
+      img {
+        width: calc(25% - 1em);
+      }
+    }
   }
 }
 
@@ -171,22 +244,35 @@
   }
   .faa-before-after {
     margin-top: 1.17em;
+    figure {
+      text-align: center;
+    }
     img {
       display: block;
       width: 100%;
       max-width: 14em;
       margin: 1em auto 0;
     }
+    @media (min-width: $lgbp) {
+      .img-container {
+        flex: 1.5;
+        display: flex;
+      }
+    }
   }
+  .faa-copy-paste-title { margin-top: 3em; }
   .faa-copy-paste {
+    margin-top: 1.17em;
     img {
       display: block;
       width: 100%;
-      max-width: 25.629em;
+      max-width: 20em;
       margin: 0 auto;
     }
   }
+  .faa-blanks-title { margin-top: 3em;}
   .faa-blanks {
+    margin-top: 1.17em;
     figure {
       max-width: 25.625em;
       margin: 0 auto;
@@ -205,8 +291,9 @@
 }
 
 .faa-introducing {
-  background-color: $text;
-  background: linear-gradient(160deg, #143322 0%,#5a9f79 100%);
+  background-color: $darkBlue;
+  border-top: 16px solid $spark;
+  border-bottom: 16px solid $spark;
   padding: 2.25em 0 0;
   overflow: hidden;
   h2 {
@@ -214,6 +301,7 @@
     color: white;
     text-align: center;
     text-transform: uppercase;
+    margin-bottom: 1.5rem;
     span {
       font-weight: normal;
       display: block;
@@ -226,37 +314,34 @@
       font-size: 1.25rem;
     }
   }
-  .images {
+  .phone-imgs {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -1em;
+    padding-left: 1em;
+    padding-right: 1em;
     img {
+      margin-left: 1em;
+      width: calc(50% - 1em);
       margin-bottom: 1em;
+    }
+    @media (min-width: $smbp) {
+      img {
+        width: calc(33.33% - 1em);
+      }
+    }
+    @media (min-width: $mdbp) {
+      flex-wrap: nowrap;
+      img {
+        width: auto;
+      }
     }
   }
   .in-ipad {
     display: block;
-    margin: 1em auto 2em;
-    width: 100%;
+    margin: 1em auto -4em;
+    width: 90%;
     max-width: 38.443em;
-  }
-  @media (max-width: 768px) {
-    padding: 5em 0 0;
-    h2 {
-      font-size: 3.375em;
-      span.int { font-size: 2rem; }
-      span.tbi { font-size: 1.5rem; }
-    }
-    .images {
-      .one,
-      .six {
-        transform: scale(0.75);
-      }
-      .two,
-      .five {
-        transform: scale(0.85);
-      }
-    }
-    .in-ipad {
-      margin-bottom: -5em;
-    }
   }
 }
 
@@ -271,8 +356,5 @@
     display: block;
     width: 100%;
     max-width: 20em;
-  }
-  .back-link {
-    margin-top: 3.325em;
   }
 }
