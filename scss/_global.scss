@@ -1,0 +1,26 @@
+html {
+  background-color: $darkBlue;
+  box-sizing: border-box;
+  // font-size: 21px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: white;
+  color: $text;
+  min-height: 100vh;
+  // font-size: 21px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 0 1em;
+}

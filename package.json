@@ -19,11 +19,10 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-connect": "^5.0.0",
-    "gulp-less": "^3.3.0",
     "gulp-shell": "^0.5.2",
-    "less-plugin-autoprefix": "^1.5.1",
-    "less-plugin-clean-css": "^1.5.1",
-    "run-sequence": "^1.2.2"
+    "run-sequence": "^1.2.2",
+    "gulp-autoprefixer": "^5.0.0",
+    "gulp-sass": "^3.1.0"
   },
   "dependencies": {
     "bootstrap": "^3.3.7"

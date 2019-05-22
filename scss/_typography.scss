@@ -3,27 +3,27 @@ html {
 }
 
 body {
-  font-family: @font-family-base;
+  font-family: $baseFont;
   font-weight: 400;
 }
 
 a {
   cursor: pointer;
-  color: @clr-link;
+  color: $link;
   text-decoration: none;
   &:hover,
   &:focus {
-    color: darken(@clr-link, 10);
+    color: darken($link, 5);
     text-decoration: underline;
   }
 }
 
 p, time, a, em, strong {
-  font-family: @font-family-base;
+  font-family: $baseFont;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: @font-family-headers;
+  font-family: $headerFont;
   margin: 0;
   line-height: 1.6em;
   & + p,
@@ -51,23 +51,6 @@ p {
   }
 }
 
-blockquote {
-  border: 2px dashed @clr-frame;
-  position: relative;
-  font-style: italic;
-  line-height: 1.4em;
-  margin: 0;
-  padding: 0.667em 1em;
-  &:before {
-    content: '"';
-    position: absolute;
-    left: 0.333em;
-  }
-  &:after {
-    content: '"';
-  }
-}
-
 ul, ol {
   margin: 0;
   padding-left: 2em;
@@ -84,18 +67,6 @@ ul, ol {
   }
 }
 
-figure {
-  margin: 0;
-  figcaption {
-    color: @clr-text-lt;
-    font-size: 0.75em;
-    font-style: italic;
-    line-height: 1.4em;
-    text-align: center;
-    margin-top: 0.25em;
-  }
-}
-
 
 // Helper Classes
 .left {
@@ -106,13 +77,6 @@ figure {
 }
 .right {
   text-align: right;
-}
-
-.large {
-  font-size: 1.125em;
-}
-.small {
-  font-size: 0.75em;
 }
 
 p, h1, h2, h3, h4, h5, h6 {

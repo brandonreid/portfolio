@@ -8,8 +8,11 @@
 }
 
 .about-photos {
-  margin-bottom: 5em;
-  .clearfix;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
   img {
     float: left;
     width: 25%;
