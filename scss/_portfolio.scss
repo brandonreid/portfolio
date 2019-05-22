@@ -1,11 +1,16 @@
 .portfolio-top {
   background-color: $darkBlue;
-  height: calc(50vh + 250px);
   position: relative;
   z-index: 20;
+  padding-bottom: 2em;
+  @media (min-width: $smbp) {
+    height: calc(50vh + 250px);
+    min-height: 550px;
+    padding-bottom: 0;
+  }
 
   h1 {
-    font-size: 3.2vw;
+    font-size: 19vw;
     color: $spark;
     line-height: 1em;
     position: relative;
@@ -13,29 +18,52 @@
     span {
       color: #040d1f;
     }
+    @media (min-width: $mnbp) {
+      font-size: 9vw;
+    }
+    @media (min-width: $mdbp) {
+      font-size: 3.2vw;
+    }
   }
 
   // Navigation Octogon
   .nav-wrapper {
     position: relative;
-    width: 500px;
-    height: 500px;
+    width: 350px;
+    height: 350px;
+    max-width: 100%;
     display: flex;
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
-    margin: calc(42vh - 250px) auto 0;
+    margin: 2em auto 0;
+    z-index: 150;
+    @media (min-width: $mnbp) {
+      width: 500px;
+      height: 500px;
+    }
+    @media (min-width: $mdbp) {
+      // margin: calc(42% - 250px) auto 0;
+      margin-top: 0;
+      top: calc(55% - 250px);
+    }
   }
   .triangle {
     position: absolute;
-    left: -300px;
-    top: -300px;
-    width: 600px;
-    height: 600px;
+    left: -100px;
+    top: -200px;
+    width: 400px;
+    height: 400px;
     polygon {
       fill: transparent;
       stroke: $link;
       stroke-width: 0.3;
+    }
+    @media (min-width: $mnbp) {
+      left: -300px;
+      top: -300px;
+      width: 600px;
+      height: 600px;
     }
   }
   .big-octogon {
@@ -53,7 +81,6 @@
       fill: $blits;
     }
   }
-  
   nav {
     position: relative;
     z-index: 100;
@@ -68,7 +95,7 @@
     }
   }
   a {
-    font-size: 2.5em;
+    font-size: 2em;
     font-family: $headerFont;
     color: rgba($text, 0.65);
     display: inline-block;
@@ -93,21 +120,31 @@
         content: "";
       }
     }
+    @media (min-width: $mnbp) {
+      font-size: 2.5em;
+    }
   }
 
   .dots {
     position: absolute;
-    right: 3%;
-    bottom: -20vh;
-    max-width: 60%;
+    right: 0%;
+    bottom: -4em;
+    max-width: 100%;
     z-index: 50;
+    @media (min-width: $mnbp) {
+      bottom: -8em;
+    }
+    @media (min-width: $smbp) {
+      bottom: -20vh;
+      max-width: 60%;
+    }
   }
 
   .divider {
     width: 100vw;
     height: auto;
     position: absolute;
-    top: 99%;
+    top: 99.9%;
     left: 0;
     right: 0;
     .area {
@@ -119,42 +156,36 @@
   }
 }
 
+
 .portfolio-pieces {
   padding-bottom: 3em;
   overflow: hidden;
   position: relative;
   h2 {
-    font-size: 6.5vw;
+    font-size: 12vw;
     text-align: right;
-    margin-top: 5.5rem;
-    margin-bottom: 13rem;
+    margin-top: 10vw;
+    margin-bottom: 1rem;
+    @media (min-width: $smbp) {
+      font-size: 6.5vw;
+      margin-top: 5.5vw;
+      margin-bottom: 13rem;
+    }
   }
   .title-row {
-    margin-bottom: 5em;
+    margin-bottom: 2em;
     position: relative;
     z-index: 50;
-    h3, p {
-      display: inline-block;
-      vertical-align: middle;
-      margin: 0;
-    }
     h3 {
       font-size: 51px;
     }
     p {
       font-size: 24px;
-      margin-left: 1em;
+      margin: 0;
     }
     &.-w-link {
-      display: flex;
-      align-items: center;
       .separator {
-        flex: 1;
-        display: inline-block;
-        vertical-align: middle;
-        height: 1px;
-        margin: 0 1.5em;
-        background-color: $link;
+        display: none;
       }
       a {
         font-size: 51px;
@@ -166,27 +197,57 @@
         }
       }
     }
+    @media (min-width: $mnbp) {
+      margin-bottom: 5em;
+      p {
+        span {
+          display: block;
+        }
+      }
+    }
+    @media (min-width: 960px) {
+      h3, p {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 0;
+      }
+      p {
+        margin-left: 1em;
+      }
+      &.-w-link {
+        display: flex;
+        align-items: center;
+        .separator {
+          flex: 1;
+          display: inline-block;
+          vertical-align: middle;
+          height: 1px;
+          margin: 0 1.5em;
+          background-color: $link;
+        }
+      }
+    }
   }
   .portfolio-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-left: -1em;
     margin-bottom: 6em;
     position: relative;
     z-index: 50;
+    @media (min-width: $mnbp) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-left: -1em;
+    }
   }
   .portfolio-item {
-    background-color: #fafbfc;
+    background-color: #f2f5f7;
     border-radius: 18px;
-    width: 400px;
-    min-height: 560px;
     max-width: 100%;
     display: inline-block;
     vertical-align: top;
     overflow: hidden;
-    margin: 0 0 3.5em 1em;
     text-decoration: none;
+    margin-bottom: 1em;
     position: relative;
     box-shadow: 0 0 12px 0px rgba($darkBlue, 0);
     transform: translateY(0px);
@@ -218,17 +279,26 @@
         text-decoration: underline;
       }
     }
+    @media (min-width: $mnbp) {
+      width: calc(50% - 1em);
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 0 1em 1em;
+    }
+    @media (min-width: $lgbp) {
+      width: calc(33% - 1em);
+      margin: 0 0 3.5em 1em;
+    }
   }
   .empty-portfolio-item {
     background-color: #fafbfc;
     border-radius: 18px;
-    width: 400px;
-    min-height: 560px;
+    min-height: 260px;
+    width: 100%;
     max-width: 100%;
     display: inline-flex;
     vertical-align: top;
     flex-direction: column;
-    margin: 0 0 2.5em 1em;
     .mini-octogon {
       width: 41px;
       height: 41px;
@@ -253,6 +323,14 @@
           fill: $blits;
         }
       }
+    }
+    @media (min-width: $mnbp) {
+      width: calc(50% - 1em);
+      margin: 0 0 1em 1em;
+    }
+    @media (min-width: $lgbp) {
+      width: calc(33% - 1em);
+      margin: 0 0 3.5em 1em;
     }
   }
   .big-octogon {
