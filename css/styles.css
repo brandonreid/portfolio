@@ -645,7 +645,7 @@ footer {
     position: relative;
     z-index: 200; }
     .portfolio-top h1 span {
-      color: #040d1f; }
+      color: #2a63db; }
     @media (min-width: 580px) {
       .portfolio-top h1 {
         font-size: 9vw; } }
@@ -894,6 +894,17 @@ footer {
       transform: translateY(-5px); }
       .portfolio-pieces .portfolio-item:hover h4 {
         text-decoration: underline; }
+    .portfolio-pieces .portfolio-item.-no-link {
+      cursor: default; }
+      .portfolio-pieces .portfolio-item.-no-link h4:after {
+        content: ''; }
+      .portfolio-pieces .portfolio-item.-no-link:hover {
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        -webkit-transform: translateY(0);
+        transform: translateY(0); }
+        .portfolio-pieces .portfolio-item.-no-link:hover h4 {
+          text-decoration: none; }
     @media (min-width: 580px) {
       .portfolio-pieces .portfolio-item {
         width: calc(50% - 1em);
