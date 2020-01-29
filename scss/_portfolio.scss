@@ -16,7 +16,7 @@
     position: relative;
     z-index: 200;
     span {
-      color: #040d1f;
+      color: lighten($darkBlue, 35%);
     }
     @media (min-width: $mnbp) {
       font-size: 9vw;
@@ -279,6 +279,21 @@
       transform: translateY(-5px);
       h4 {
         text-decoration: underline;
+      }
+    }
+    &.-no-link {
+      cursor: default;
+      h4 {
+        &:after {
+          content: '';
+        }
+      }
+      &:hover {
+        box-shadow: none;
+        transform: translateY(0);
+        h4 {
+          text-decoration: none;
+        }
       }
     }
     @media (min-width: $mnbp) {
